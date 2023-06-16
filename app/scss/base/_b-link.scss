@@ -1,0 +1,31 @@
+.b-link {
+  width: fit-content;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: all ease-in-out 100ms;
+  @include Body-1;
+  
+  @media (hover: hover){
+
+    &:hover {
+      opacity: 50%;
+    }}
+
+  &.--black-white {
+    color: var(--color-on-background);
+    @media (hover: hover){
+
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  &.--xl {
+    @include H1;
+  }
+
+  &.--lg {
+    @include Body-3;
+  }
+}

@@ -1,0 +1,134 @@
+.c-portfolio-card {
+  $parent: &;
+
+  display: block;
+  width: 100%;
+
+  &_container {
+    position: relative;
+    margin-bottom: 18px;
+    overflow: hidden;
+  }
+
+  &_open-on {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 85%;
+    color: var(--color-light-text);
+    opacity: 0;
+    transform: translate(-50%, -49%);
+    text-align: center;
+
+    transition: transform ease-in-out 200ms, opacity ease-in-out 200ms;
+    @include heading-family;
+    @include H2;
+  }
+
+  &_blur {
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    @include blur;
+    transform: scale(1.2);
+  }
+
+  &_blur-color {
+    background: var(--color-blur);
+  }
+
+
+  &_external {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: var(--color-tertiary-background);
+    border-radius: 100%;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      opacity: 0.4;
+
+      path {
+        fill: var(--color-on-tertiary-background);
+      }
+    }
+  }
+
+  &_text {
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &_image {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+  }
+
+  &_title {
+    flex: 1;
+    width: 95%;
+    color: var(--color-on-background);
+    transition: opacity ease-in-out 200ms;
+  }
+
+  &_instruments {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 16px;
+  }
+
+  &_instrument {
+    color: var(--color-on-background);
+    opacity: 0.6;
+
+    @include Caption;
+  }
+  @media (hover: hover) {
+
+    &:hover {
+      #{$parent}_title {
+        opacity: 0.7;
+      }
+      #{$parent}_blur {
+        opacity: 1;
+      }
+      #{$parent}_blur-color {
+        opacity: 1;
+      }
+      #{$parent}_open-on {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &.--figma {
+    #{$parent}_container {
+      margin-bottom: 24px;
+    }
+
+    #{$parent}_text {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      column-gap: 18px;
+    }
+
+    #{$parent}_title {
+      min-width: 214px;
+    }
+
+    #{$parent}_image {
+      aspect-ratio: 2/1;
+    }
+  }
+}

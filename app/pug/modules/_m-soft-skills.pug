@@ -1,0 +1,7 @@
+mixin m-soft-skills(params)
+  section.m-soft-skills&attributes(params.attrs)
+    h2.m-soft-skills_title.js-soft-skills-title: |!{params.title}
+    .m-soft-skills_list.js-soft-skills-list
+      block
+
+    img(src="../../assets/images/secondary-image.jpg", alt="second image").m-soft-skills_image.js-soft-skills-image

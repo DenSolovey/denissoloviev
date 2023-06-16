@@ -1,0 +1,6 @@
+mixin m-on-loading(params)
+  section.m-on-loading&attributes(params.attrs)
+    .m-on-loading_container
+      h1.m-on-loading_title: |!{params.title}
+      .m-on-loading_progressbar: +b-progressbar({})
+    .m-on-loading_effect

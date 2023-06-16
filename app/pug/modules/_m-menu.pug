@@ -1,0 +1,11 @@
+mixin m-menu(params)
+  .m-menu&attributes(params.attrs)
+    .m-menu_header-bg
+    .m-menu_components
+      .m-menu_blackout.js-menu-blackout
+      .m-menu_navigation-bg
+      +c-menu-navigation({attrs: {
+        class: 'js-menu-navigation'
+      }})
+      +c-menu-contacts({})
+    

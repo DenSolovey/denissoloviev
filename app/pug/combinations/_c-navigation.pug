@@ -1,0 +1,14 @@
+mixin c-navigation(params)
+  ul.c-navigation&attributes(params.attrs)
+    if params.effect
+      li.c-navigation_item: +b-navigation-button({attrs: {href: '#about', class: 'js-navigation-effect'}}): |Обо мне
+      li.c-navigation_item: +b-navigation-button({attrs: {href: '#resume', class: 'js-navigation-effect'}}): |Резюме
+      li.c-navigation_item: +b-navigation-button({attrs: {href: '#portfolio', class: 'js-navigation-effect'}}): |Портфолио
+      li.c-navigation_item: +b-navigation-button({attrs: {href: '#skills', class: 'js-navigation-effect'}}): |Навыки
+      li.c-navigation_item: +b-navigation-button({attrs: {href: '#contacts', class: 'js-navigation-effect'}}): |Контакты
+    else
+      li.c-navigation_item: +b-navigation-button({attrs: {href: '#about', class: 'js-navigation'}}): |Обо мне
+      li.c-navigation_item: +b-navigation-button({attrs: {href: '#resume', class: 'js-navigation'}}): |Резюме
+      li.c-navigation_item: +b-navigation-button({attrs: {href: '#portfolio', class: 'js-navigation'}}): |Портфолио
+      li.c-navigation_item: +b-navigation-button({attrs: {href: '#skills', class: 'js-navigation'}}): |Навыки
+      li.c-navigation_item: +b-navigation-button({attrs: {href: '#contacts', class: 'js-navigation'}}): |Контакты

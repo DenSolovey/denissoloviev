@@ -1,0 +1,22 @@
+.b-copy-button {
+
+  svg {
+    width: 32px;
+    height: 32px;
+
+    path {
+      fill: var(--color-on-background);
+      transition: fill ease-in-out 100ms;
+    }
+  }
+  @media (hover: hover) {
+
+    &:hover {
+
+      svg path {
+        fill: var(--color-primary);
+        opacity: 50%;
+      }
+    }
+  }
+}

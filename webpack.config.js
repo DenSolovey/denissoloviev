@@ -41,7 +41,7 @@ let plugins = [
     ],
   }),
 ];
-MultiplePages(glob.sync('./app/pug/*.pug'));
+MultiplePages(glob.sync('./app/pug/pages/*.pug'));
 
 function MultiplePages(paths) {
   for (const html of paths) {
@@ -55,6 +55,7 @@ function MultiplePages(paths) {
         hash: true,
         minify: false,
         inject: 'body',
+        cache: false,
       })
     );
   }

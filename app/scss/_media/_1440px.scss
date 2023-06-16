@@ -1,0 +1,44 @@
+@media only screen and (max-width: 1440px) {
+
+  :root {
+    --section-horizontal-padding: 50px;
+    --secondary-horizontal-padding: 32px;
+  }
+
+  .m-header {
+    padding: 0 var(--secondary-horizontal-padding);
+  
+    &_effects {
+      top: 0;
+    }
+  
+    &_gradient-bg {
+      height: 62px;
+    }
+
+    &_logo {
+      top: 14px;
+      left: 48px;
+    }
+  }
+
+  .m-footer {
+    padding: 0 var(--secondary-horizontal-padding);
+
+    &_gradient-bg {
+      height: 62px;
+    }
+  }
+
+  .m-about {
+    padding: 116px var(--section-horizontal-padding);
+  }
+
+  .m-portfolio_cards {
+    grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
+  }
+
+  .m-contacts {
+    padding: 6vw var(--section-horizontal-padding) 16px;
+  }
+}

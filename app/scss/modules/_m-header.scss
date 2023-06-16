@@ -1,0 +1,51 @@
+.m-header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px var(--secondary-horizontal-padding);
+  overflow: hidden;
+  mix-blend-mode: exclusion;
+
+  .b-menu {
+    display: none;
+  }
+
+  &_effects {
+    position: fixed;
+    top: 8px;
+    right: var(--secondary-horizontal-padding);
+
+    .b-navigation-button {
+      color: transparent;
+    }
+  }
+
+  &_gradient-bg {
+    position: fixed;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 80px;
+    background: var(--color-gradient-top);
+
+    &.--onScroll {
+      display: block;
+    }
+  }
+
+  &_logo{ 
+    position: fixed;
+    top: 23px;
+    left: 87px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+
+      path {
+        fill: var(--color-primary);
+      }
+    }}
+}

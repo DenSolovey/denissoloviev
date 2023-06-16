@@ -1,0 +1,45 @@
+/* stylelint-disable declaration-no-important */
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-on-background-secondary);
+}
+
+html {
+  scrollbar-color: var(--color-on-background-secondary) transparent;
+  scrollbar-width: thin;
+}
+
+
+.custom-scroll {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.scrollbar-track {
+  width: 4px !important;
+  background-color: transparent !important;
+  opacity: 1;
+  transition: opacity ease-in-out 100ms;
+}
+
+.scrollbar-track.--hidden {
+  background-color: transparent !important;
+  opacity: 0 !important;
+}
+
+.scrollbar-thumb {
+  background: var(--color-on-background-secondary) !important;
+  border-radius: 0 !important;
+}

@@ -1,0 +1,53 @@
+.b-menu {
+  $parent: &;
+
+  display: flex;
+  gap: 6px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 23px 19px 22px;
+  cursor: pointer;
+  mix-blend-mode: exclusion;
+  transition: opacity ease-in-out 100ms;
+
+  &_line {
+    height: 1px;
+    background: var(--color-light-text);
+    transition: width ease-in-out 100ms, transform ease-in-out 100ms;
+    
+
+    &:nth-child(1) {
+      width: 21px;
+    }
+
+    &:nth-child(2) {
+      width: 19px;
+    }
+
+    &:nth-child(3) {
+      width: 20px;
+    }
+  }
+  @media (hover: hover){
+
+    &:hover {
+      opacity: 0.5;
+    }}
+
+  &.--close {
+    #{$parent}_line:nth-child(1) {
+      width: 21px;
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    #{$parent}_line:nth-child(2) {
+      width: 0;
+    }
+
+    #{$parent}_line:nth-child(3) {
+      width: 21px;
+      transform: rotate(45deg) translate(-4px, -5px);
+    }
+  }
+}

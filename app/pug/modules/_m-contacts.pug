@@ -1,0 +1,12 @@
+mixin m-contacts(params)
+  section.m-contacts&attributes(params.attrs)
+    h1.m-contacts_title.js-contacts-title Скажи «#[+b-link({attrs: {href: 'https://t.me/DenisSoloveyDesign', class: 'm-contacts_link', target: '_blank'}}): |Привет!]»
+    .m-contacts_contacts
+      .m-contacts_links
+        +b-link({attrs: {class: '--lg --black-white', href: 'tel:+79298525562'}}): |+7 929 852 5562
+        .m-contacts_email
+          +b-link({attrs: {class: '--lg --black-white js-email', href: 'mailto:denis.solovey.design@gmail.com'}}): |denis.solovey.design@gmail.com
+          +b-copy-button({attrs: {class: 'js-copy-button'}})
+      .m-contacts_socials
+        +c-socials({})
+        +c-messengers({})

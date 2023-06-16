@@ -1,0 +1,19 @@
+.m-portfolio {
+  width: 100%;
+  max-width: 1920px;
+  margin-right: auto;
+  margin-left: auto; 
+  padding: 164px var(--section-horizontal-padding);
+  
+  &_title {
+    margin-bottom: 48px;
+  }
+
+  &_cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    column-gap: 24px;
+    row-gap: 56px;
+  }
+  
+}

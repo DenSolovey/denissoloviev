@@ -1,0 +1,5 @@
+mixin m-header(params)
+  header.m-header&attributes(params.attrs)
+    +b-logo({attrs: {class: 'js-header-logo'}})
+    +c-navigation({})
+    +b-menu({attrs: {class: 'js-menu-button'}})

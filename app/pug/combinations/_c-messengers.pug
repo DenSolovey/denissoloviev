@@ -1,0 +1,8 @@
+- var $whatsapp = 'https://wa.me/+79298525562'
+- var $telegram = 'https://t.me/DenisSoloveyDesign'
+
+mixin c-messengers(params)
+  ul.c-messengers&attributes(params.attrs)
+    li.c-messengers_item: +b-socials-button({attrs:{class: '--md', href: $whatsapp}}): |Whats app
+    li.c-messengers_item: +b-socials-button({attrs:{class: '--md', href: $telegram}}): |Telegram
+  

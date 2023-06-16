@@ -1,0 +1,28 @@
+.b-logo {
+  display: flex;
+  gap: 6px;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  cursor: pointer;
+
+  &_empty-box {
+    width: 16px;
+    height: 16px;
+  }
+
+  &_text {
+    @include Body-1;
+    color: var(--color-light-text);
+    mix-blend-mode: exclusion;
+    transition: opacity ease-in-out 100ms;
+  }
+  @media (hover: hover){
+
+    &:hover {
+
+      .b-logo_text {
+        opacity: 0.5;
+      }
+    }}
+}

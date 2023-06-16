@@ -1,0 +1,44 @@
+/* stylelint-disable declaration-no-important */
+@media only screen and (max-width: 850px) {
+
+  :root {
+    --section-horizontal-padding: 32px;
+    --secondary-horizontal-padding: 16px;
+  }
+
+  .m-header_logo {
+    left: 32px;
+  }
+
+  .m-about {
+    padding: 96px 10vw 80px var(--section-horizontal-padding);
+  }
+
+  .c-portfolio-card {
+
+    &_title {
+      @include Body-2;
+    }
+
+    &_container {
+      margin-bottom: 22px;
+    }
+
+    &_text {
+      gap: 10px;
+    }
+
+    &_image {
+      aspect-ratio: 1.618/1;
+    }
+  }
+
+
+  .m-resume_list {
+    min-width: 100%;
+  }
+
+  .m-portfolio_cards {
+    grid-template-columns: 1fr;
+  }
+}

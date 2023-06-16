@@ -1,0 +1,10 @@
+mixin c-menu-contacts(params)
+  .c-menu-contacts&attributes(params.attrs)
+    .c-menu-contacts_contacts
+      +b-link({attrs: {class: '--lg --black-white'}, href: 'tel:+79298525562'}): |+7 929 852 5562
+      .c-menu-contacts_email
+        +b-link({attrs: {class: '--lg --black-white js-email'}, href: 'mailto:denis.solovey.design@gmail.com'}): |denis.solovey.design@gmail.com
+        +b-copy-button({attrs: {class: 'js-copy-button'}})
+    .c-menu-contacts_links
+      +c-socials({})
+      +c-messengers({})

@@ -1,0 +1,23 @@
+.m-soft-skills {
+  position: relative;
+  max-width: 1920px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 264px var(--section-horizontal-padding);
+
+  &_title {
+    margin-bottom: 12px;
+  }
+
+  &_list {
+    width: 100%;
+    max-width: 864px;
+  }
+
+  &_image {
+    position: absolute;
+    top: 144px;
+    right: var(--section-horizontal-padding);
+    width: 29%;
+  }
+}

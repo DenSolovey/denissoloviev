@@ -1,0 +1,6 @@
+mixin m-about(params)
+  section.m-about&attributes(params.attrs)
+    .m-about_text
+      h2.m-about_title.js-about-title: |!{params.title}
+      p.m-about_description.js-about-text
+        block

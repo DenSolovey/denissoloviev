@@ -1,0 +1,7 @@
+mixin m-hello-screen(params)
+  section.m-hello-screen&attributes(params.attrs)
+    .m-hello-screen_grid-title-container
+      .m-hello-screen_title-container
+        h1.m-hello-screen_title: |!{params.title}
+    .m-hello-screen_grid-image-container
+      img(src="../../assets/images/primary-image.jpg", alt="Primary Image").m-hello-screen_image

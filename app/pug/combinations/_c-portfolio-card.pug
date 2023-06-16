@@ -1,0 +1,17 @@
+mixin c-portfolio-card(params)
+  a.c-portfolio-card(target = '_blank')&attributes(params.attrs)
+    .c-portfolio-card_container
+      .c-portfolio-card_external
+        include ../../assets/icons/external-link.svg
+      img(src=params.imageLink, alt='').c-portfolio-card_blur.--overlay
+      .c-portfolio-card_blur-color.--overlay
+      span.c-portfolio-card_open-on: |#{params.openOn}
+      img(src=params.imageLink, alt=params.alt).c-portfolio-card_image
+        
+    .c-portfolio-card_text
+      span.c-portfolio-card_title: block
+      .c-portfolio-card_instruments
+        each $instrument in params.instruments
+          span.c-portfolio-card_instrument: |#{$instrument}
+          
+        

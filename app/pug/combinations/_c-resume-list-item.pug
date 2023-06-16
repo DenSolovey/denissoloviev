@@ -1,0 +1,14 @@
+mixin c-resume-list-item(params)
+  .c-resume-list-item&attributes(params.attrs)
+    .c-resume-list-item_title
+      if params.type == 'job'
+        .c-resume-list-item_company-date
+          span.c-resume-list-item_company: |#{params.name}
+          span.c-resume-list-item_date: |#{params.date}
+        +b-link({attrs: {href: params.href, target: '_blank'}}): |#{params.site}
+      else if params.type == 'education'
+        .c-resume-list-item_company-date
+          span.c-resume-list-item_company: |#{params.name}
+        span.c-resume-list-item_link-or-course: |#{params.course}
+    .c-resume-list-item_text
+      block

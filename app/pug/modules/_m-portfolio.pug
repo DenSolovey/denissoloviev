@@ -1,0 +1,5 @@
+mixin m-portfolio(params)
+  section.m-portfolio&attributes(params.attrs)
+    h2.m-portfolio_title: |!{params.title}
+    .m-portfolio_cards
+      block

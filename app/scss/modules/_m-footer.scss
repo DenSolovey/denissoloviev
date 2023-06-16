@@ -1,0 +1,27 @@
+.m-footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px var(--secondary-horizontal-padding);
+  mix-blend-mode: exclusion;
+
+  &_gradient-bg {
+    position: fixed;
+    bottom: 0;
+    display: none;
+    width: 100%;
+    height: 80px;
+    background: var(--color-gradient-bottom);
+
+    &.--onScroll {
+      display: block;
+    }
+  }
+
+  & .b-socials-button {
+    pointer-events: auto;
+  }
+}

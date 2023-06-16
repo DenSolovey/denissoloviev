@@ -1,0 +1,24 @@
+body {
+  overflow-x: hidden;
+  color: var(--color-on-background);
+  background-color: var(--color-background);
+  @include body-family;
+  @include Body-1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include heading-family;
+}
+
+h1 {
+  @include H1;
+}
+
+h2 {
+  @include H2;
+}

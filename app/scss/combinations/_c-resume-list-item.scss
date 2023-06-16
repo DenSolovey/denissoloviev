@@ -1,0 +1,35 @@
+.c-resume-list-item {
+
+  &_title {
+    display: flex;
+    gap: 8px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    padding: 16px 0px;
+    border-bottom: 1px solid var(--color-on-background);
+  }
+
+  &_company-date {
+    display: flex;
+    gap: 16px;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-right: 24px;
+  }
+
+  &_company {
+    @include Body-3;
+  }
+  
+  &_link-or-course {
+    width: fit-content;
+  }
+
+  &_text p {
+    margin-top: 8px;
+  }
+}

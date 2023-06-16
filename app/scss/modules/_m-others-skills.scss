@@ -1,0 +1,15 @@
+.m-others-skills {
+  max-width: 1920px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 164px var(--section-horizontal-padding) 236px;
+
+  &_title {
+    margin-bottom: 12px;
+  }
+
+  &_list {
+    width: 100%;
+    max-width: 1304px;
+  }
+}

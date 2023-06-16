@@ -1,0 +1,156 @@
+include ../includes.pug
+
+doctype html
+html(lang='ru')
+  +m-head
+  
+  body.--noScroll
+    style
+      include ../../preload/__preload-onLoad.css
+
+    +m-on-loading({attrs: {class: 'js-on-loading'}, title: 'Привет!'})
+    
+    main
+      +m-hello-screen({attrs: {class: 'js-hello-section'}, title:'Меня зовут Денис<br>и я UX/UI дизайнер'})
+      +m-about({attrs: {id: 'about', class: 'js-about-section'},title: 'Пара строк обо мне'})
+        |Я придерживаюсь философии минимализма и уделяю особое внимание эстетике, качеству своей работы и взаимодейсвию с командой
+
+      section#resume
+        +m-resume({attrs: {class: '--edu js-resume-section'}, title: 'Тут я обучался'})
+          +c-resume-list-item({
+            type: 'education',
+            name: 'Кубанский ГАУ',
+            course: 'Бакалавриат - Факультет прикладной информатики'
+          })
+            p В качестве курсовых работ разработал игру на C++ “Поиск морфинг объектов” и мобильное приложение для андройд “Кухонный калькулятор”
+            p Для диплома разработал плагин для фигмы #[+b-link({attrs:{href: 'https://www.figma.com/community/plugin/1042681939283501853/DS-Templater-(beta)', target: '_blank'}}): |DS-Templater] и защитил с отличием
+
+
+        +m-resume({attrs: {class: '--job'}, title: 'А тут я работал'})
+          +c-resume-list-item({
+            type: 'job',
+            name: 'ASTEQ',
+            date: '1 год 10 месяцев',
+            href: 'https://asteq.ru/',
+            site: 'asteq.ru',
+          })
+            p Принимал участие в работе над улучшением опыта взаимодействия для сайтов от Агрокомплекса, Капики и Кубанского ГАУ
+            p Создавал кейсы для behance и постов в instagram
+            p Разрабатывал прототипы интерфейсов и их макетов
+            p Проектировал пользовательский опыт
+            p Работал над такими проектами как #[+b-link({attrs:{href: 'https://www.behance.net/gallery/133615557/Dream-floor-Site-catalog', target: '_blank'}}): |Dream Floor], #[+b-link({attrs:{href: 'https://www.behance.net/gallery/145625335/Cooktoo-Cooking-Club-Landing-Page', target: '_blank'}}): |CookToo], #[+b-link({attrs:{href: 'https://www.behance.net/gallery/152635695/KubSAU-Agrarian-University-Course-aggregator', target: '_blank'}}): |Каталог курсов для КубГАУ], #[+b-link({attrs:{href: 'https://www.behance.net/gallery/154687371/Beseda-Restaraunt-Site-menu', target: '_blank'}}): |Меню для ресторана “Беседа”] и #[+b-link({attrs:{href: 'https://www.behance.net/gallery/165033253/Class-Shedule-for-KubSAU-PWA', target: '_blank'}}): |Расписание занятий для КубГАУ]
+
+      section#portfolio
+        +m-portfolio({attrs: {class: '--external'},title: 'Проекты над которыми я работал'})
+          +c-portfolio-card({
+            attrs:{href:'https://www.behance.net/gallery/165033253/Class-Shedule-for-KubSAU-PWA'},
+            openOn: 'Открыть на Behance', 
+            imageLink:'https://mir-s3-cdn-cf.behance.net/projects/808/494fb8165033253.Y3JvcCwxNTgwLDEyMzYsMyww.jpg',
+            alt: 'Рассписание занятий для Кубанского ГАУ',
+            instruments: ['#Figma', '#After Effects']
+          }): |Рассписание занятий для КубГАУ
+          +c-portfolio-card({
+            attrs:{href:'https://www.behance.net/gallery/154687371/Beseda-Restaraunt-Site-menu'},
+            openOn: 'Открыть на Behance', 
+            imageLink:'https://mir-s3-cdn-cf.behance.net/projects/808/245a25154687371.Y3JvcCwxNTgwLDEyMzYsMyww.jpg',
+            alt: 'Меню для ресторана «Беседа»',
+            instruments: ['#Figma','#Protopie', '#After Effects']
+          }): |Меню для ресторана «Беседа»
+          +c-portfolio-card({
+            attrs:{href:'https://www.behance.net/gallery/152635695/KubSAU-Agrarian-University-Course-aggregator'},
+            openOn: 'Открыть на Behance', 
+            imageLink:'https://mir-s3-cdn-cf.behance.net/projects/808/6a704e152635695.Y3JvcCwxNTgwLDEyMzYsMyww.jpg',
+            alt: 'Каталог курсов для Кубанского ГАУ',
+            instruments: ['#Figma','#Protopie','#Blender', '#After Effects']
+          }): |Каталог курсов для КубГАУ
+          +c-portfolio-card({
+            attrs:{href:'https://www.behance.net/gallery/145625335/Cooktoo-Cooking-Club-Landing-Page'},
+            openOn: 'Открыть на Behance', 
+            imageLink:'https://mir-s3-cdn-cf.behance.net/projects/808/e0c2f8145625335.Y3JvcCwxNTgwLDEyMzYsMyww.jpg',
+            alt: 'Одностраничник для онлайн-ресторана «CookToo»',
+            instruments:  ['#Figma','#Protopie','#Photoshop', '#After Effects']
+          }): |Одностраничник для онлайн-ресторана «CookToo»
+          +c-portfolio-card({
+            attrs:{href:'https://www.behance.net/gallery/133615557/Dream-floor-Site-catalog'},
+            openOn: 'Открыть на Behance', 
+            imageLink:'https://mir-s3-cdn-cf.behance.net/projects/808/832aa2133615557.Y3JvcCwxNTgwLDEyMzYsMyww.jpg',
+            alt: 'Каталог для производителя напольных покрытий «Dream Floor»',
+            instruments: ['#Figma','#Illustrator', '#After Effects']
+          }): |Каталог для производителя напольных покрытий «Dream Floor»
+
+
+        +m-portfolio({attrs: {class: '--personal'}, title: 'Проекты над которыми я работал'})
+          +c-portfolio-card({
+            attrs:{
+              class: '--figma',
+              href:'https://www.figma.com/community/plugin/1219008484601651003'
+            },
+            openOn: 'Открыть в Figma Community', 
+            imageLink:'https://s3-alpha-sig.figma.com/plugins/1219008484601651003/55440/29701537/07810278-a20c-4462-ad88-f5fed5bad229-cover?Expires=1687132800&Signature=IURy1TT2xxRTzTa0-9b0PB0ccEZe6pwTrqqU4qaDBbnJYuts~W8CGl2w0hdjBCYiUln5WAEIqpav6pwFf6RQAUI8ygoxxf6v~fTt9JaI-rbclDg8MjgWC-e~j-lJ1x1rVN~sFLPV-d~bWkQpSB~EYPBivFdXWOXCS9PiGyER8mQ0x~gIHFwljse9AEmvaTsdXKyWOIbkf7q~xXXd2yhuEg-tIwa~uStdiRZmB2uXuBSU5cVEC2TK6ydRhjSy1jDuGm3joR4Ig7flrtGLfrlCmKlkdkXlev9Bm6zZ-a8ZU6obozK6Pn~U7JKz7oSq9096pLZ7JOl82wi~XfB38i4ptQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+            alt: 'Multiple Groups',
+            instruments: ['#Figma','#Plugin']
+          }): |Multiple Groups
+          +c-portfolio-card({
+            attrs:{
+              class: '--figma',
+              href:'https://www.figma.com/community/plugin/1052937551486129898/Unused-Styles-Remover'
+            },
+            openOn: 'Открыть в Figma Community', 
+            imageLink:'https://s3-alpha-sig.figma.com/plugins/1052937551486129898/38995/64264883/82b4504d-bb57-4637-a41f-aab7251a8457-cover?Expires=1687132800&Signature=CX19pi9Rfts1~ZpWgdBLl9BfV5kskNbzqbUUfuGvFVsJxBPiLJguzlvU2RfQ1MokVthdoWsxGyXHg4xaIUwhVlzYJ6tDcF5-tzmDNrcO3To15c1rPyfJdyKKCoWMbyoyB2uESU8YgxIB7llS8F5WQrKvx8GMSWh0il5zM3vmhEIhXZBwE9gELA~fTV9xMRD9oa2EhCQSqAtqc5GXWgLmDGaj1YrvBvdkvnTpR0PHh6saCkFuCpjqB42Fpq-YgfcYt9Zh6XRFhiSQyMPydpe0SpPz4P9ADfiPAXwMTWNub8TqF6qEGKWsXB-bmT5uezb4qJ8DjXGQ68TCRX2vy2mKKA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+            alt: 'Unused Styles Remover',
+            instruments: ['#Figma','#Plugin']
+          }): |Unused Styles Remover
+          +c-portfolio-card({
+            attrs:{
+              class: '--figma',
+              href:'https://www.figma.com/community/plugin/1042681939283501853/DS-Templater-(beta)'
+            },
+            openOn: 'Открыть в Figma Community', 
+            imageLink:'https://s3-alpha-sig.figma.com/plugins/1042681939283501853/27567/30620093-e8ac-4d1d-8ba6-1c193f74b0d9-cover?Expires=1687132800&Signature=qbJ952w20KVztZoglE0uZe5EAnreWb5BL1XjdW2x~wCqL4digg65WxYBHcX7R4lGG4ayMKJ-KYL206-MQdlUdfToZYtMZp1ZCFcJTwSonr6upXHffIER6DuIEk9XlqfoJOubRkRGbJMNFp8eEQXgyZMZ4hAQqkYFMGeMXUPGmqZ4pldNZ3CLfcVMd51B1VLFf-Z2KhWIdQnHs8PA9BLuNkivDJqtTQZgfHGBAinM~XnITsv-XfQ13C~F4Pop1E~~0BRKUhR1BD~Kds5jS6GwWOEDew5D2F62KcdSsxF1E1va-httbownkEjjW0VtLjIqiVSSON4J0Is4UI~fAioNhw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+            alt: 'DS-Templater (beta)',
+            instruments: ['#Figma','#Plugin']
+          }): |DS-Templater (beta)
+
+      section#skills
+        +m-soft-skills({title: 'Мои личностные качества', attrs: {class: 'js-soft-skills-section'}})
+          +b-skills-list-item({}): |Ответственность
+          +b-skills-list-item({}): |Энтузиазм
+          +b-skills-list-item({}): |Высокая самообучаемость
+          +b-skills-list-item({}): |Целеустремленность
+          +b-skills-list-item({}): |Спокойное отношение к критике
+
+
+        +m-hard-skills({title: 'Мой уровень владения <br> основным инструментарием', attrs: {class: 'js-hard-skills-section'}})
+          +b-skills-list-item({level: 'Очень высокий'}): |Figma
+          +b-skills-list-item({level: 'Высокий'}): |Protopie
+          +b-skills-list-item({level: 'Высокий'}): |Adobe Photoshop
+          +b-skills-list-item({level: 'Средний'}): |Adobe Illustrator
+          +b-skills-list-item({level: 'Средний'}): |Adobe After Effects
+
+
+        +m-hard-skills({title: 'Мой уровень владения <br> дополнительным инструментарием', attrs: {class: 'js-hard-skills-section'}})
+          +b-skills-list-item({level: 'Средний'}): |Blender
+          +b-skills-list-item({level: 'Средний'}): |Corel Draw
+          +b-skills-list-item({level: 'Высокий'}): |Notion
+          +b-skills-list-item({level: 'Средний'}): |VS Code, HTML, CSS, JS
+
+
+        +m-others-skills({title: 'И еще немного обо мне', attrs: {class: 'js-others-skills-section'}})
+          +b-skills-list-item({}): |Знаком с методологией атомарного дизайна и активно им пользуюсь 
+          +b-skills-list-item({}): |Знаком с такими артефактами, как Персонажи, User Stories, User-Flow, Wire-Flow, Screen-Flow
+          +b-skills-list-item({}): |Ознакомлен с такими стайл гайдами, как Material Design v2-3 и HIG
+          +b-skills-list-item({}): |Хорошо понимаю, как устроена разработка
+
+
+      +m-contacts({attrs: {id: 'contacts', class: 'js-contacts-section'}})
+  
+    .m-header_gradient-bg.js-header-bg
+    .m-footer_gradient-bg.js-footer-bg
+    +m-menu({attrs: {class: 'js-menu'}})
+    .m-header_effects
+      +c-navigation({effect: true})
+    +m-header({attrs: {class: 'js-header'}})
+    .m-header_logo: include ../../assets/icons/logo.svg
+    +m-footer({attrs: {class: 'js-footer'}})
+    +b-status({attrs: {class: '--cursor js-status-cursor js-status'}}): |Скопривано
+    +b-status({attrs: {class: 'js-status'}}): |Скопривано

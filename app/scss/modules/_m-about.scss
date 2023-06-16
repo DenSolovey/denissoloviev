@@ -1,0 +1,19 @@
+.m-about {
+  display: flex;
+  align-items: flex-end;
+  height: 100lvh;
+  padding: 144px var(--section-horizontal-padding);
+  background-color: var(--color-background);
+
+  &_text {
+    width: 804px;
+  }
+
+  &_title {
+    margin-bottom: 10px;
+  }
+
+  &_description {
+    @include Body-3;
+  }
+}

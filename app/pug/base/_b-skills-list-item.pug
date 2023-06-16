@@ -1,0 +1,6 @@
+mixin b-skills-list-item(params)
+  .b-skills-list-item&attributes(params.attrs)
+    .b-skills-list-item_text: block
+    if params.level
+      .b-skills-list-item_level: |#{params.level}
+  

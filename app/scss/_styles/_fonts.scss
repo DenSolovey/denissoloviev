@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
+
+@mixin deviseFZ($type) {
+  @if $type == 'desktop' {
+    --h1-fs: 5vw;
+    --h1-lh: 140%;
+
+    --h2-fs: 24px;
+    --h2-lh: 32px;
+
+    --caption-fs: 16px;
+    --caption-lh: 24px;
+
+    --body-1-fs: 18px;
+    --body-1-lh: 28px;
+
+    --body-2-fs: 24px;
+    --body-2-lh: 34px;
+
+    --body-3-fs: 32px;
+    --body-3-lh: 44px;
+  } @else if $type == 'mobile' {
+    --h1-fs: 9vw;
+    --h1-lh: 140%;
+
+    --h2-fs: 14px;
+    --h2-lh: 18px;
+
+    --body-1-fs: 12px;
+    --body-1-lh: 18px;
+
+    --body-2-fs: 16px;
+    --body-2-lh: 22px;
+
+    --body-3-fs: 18px;
+    --body-3-lh: 26px;
+  }
+}
+
+:root {
+  @include deviseFZ('desktop');
+}
+
+@mixin heading-family {
+  font-family: Raleway, sans-serif;
+}
+
+@mixin body-family {
+  font-family: Inter, sans-serif;
+}
+
+@mixin H1 {
+  font-size: var(--h1-fs);
+  line-height: var(--h1-lh);
+  letter-spacing: -1.5px;
+}
+
+@mixin H2 {
+  font-size: var(--h2-fs);
+  font-weight: 300;
+  line-height: var(--h2-lh);
+  letter-spacing: -0.5px;
+}
+
+@mixin Body-1 {
+  font-size: var(--body-1-fs);
+  font-weight: 400;
+  font-style: normal;
+  line-height: var(--body-1-lh);
+  letter-spacing: 0.5px;
+  text-transform: none;
+  text-decoration: none;
+}
+
+@mixin Body-2 {
+  font-size: var(--body-2-fs);
+  line-height: var(--body-2-lh);
+  letter-spacing: 0.25px;
+}
+
+@mixin Body-3 {
+  font-size: var(--body-3-fs);
+  line-height: var(--body-3-lh);
+  letter-spacing: 0.25px;
+}
+
+@mixin Caption {
+  font-size: var(--caption-fs);
+  line-height: var(--caption-lh);
+  letter-spacing: 0.25px;
+}

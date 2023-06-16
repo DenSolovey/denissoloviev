@@ -1,0 +1,5 @@
+mixin m-resume(params)
+  section.m-resume&attributes(params.attrs)
+    h2.m-resume_title.js-resume-title: |!{params.title}
+    .m-resume_list.js-resume-list
+      block
