@@ -6,7 +6,7 @@ import '../scss/index.scss';
 import gsap from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { body, onload } from './_queries';
+import { body, contacts, hello_screen, menu, onload } from './_queries';
 import triggerHeader from './ScrollTrigger/_header';
 import triggerFooter from './ScrollTrigger/_footer';
 import triggerNavigationButtons from './ScrollTrigger/_navigation-buttons';
@@ -18,10 +18,11 @@ import triggerContacts from './ScrollTrigger/_contacts';
 import eventsLogo from './Interactive/navigation/events-logo';
 import eventsNavButtons from './Interactive/navigation/events-buttons';
 import eventsMenu from './Interactive/menu/events';
-import triggerSoftSkills from './ScrollTrigger/_softt-skills';
+// import triggerSoftSkills from './ScrollTrigger/_softt-skills';
 import navScrollbar from './Interactive/navigation/navScrollBar';
 import eventCopyButton from './Interactive/copy/event';
 import followCursor from './Interactive/status/_followCursor';
+import isMobile from './_isMobile';
 
 let ProgressBar = require('progressbar.js');
 
@@ -34,6 +35,8 @@ window.onload = () => {
   gsap.registerPlugin(ScrollToPlugin);
   gsap.registerPlugin(ScrollTrigger);
 
+  resizeOnMobile();
+  dynamycResizeOnMobile();
 
   onload.classList.add('--done');
   
@@ -66,39 +69,24 @@ window.onload = () => {
 
   window.onresize = () => {
     ScrollTrigger.refresh();
+    dynamycResizeOnMobile();
   };
 
-  // function resizeImage() {
-  //   console.dir(hello_image);
-  //   // if (
-  //   //   window.innerWidth <= 1050 &&
-  //   //   hello_image_container.clientWidth >= hello_image.clientWidth &&
-  //   //   hello_image.style.objectFit === ''
-  //   // ) {
-  //   //   hello_image.style.objectFit = 'cover';
-  //   //   // hello_image.style.width = '100vw';
+  function dynamycResizeOnMobile() {
+    if (isMobile()) {
+      contacts.style.height = window.innerHeight + 'px';
+      menu.style.height = window.innerHeight + 'px';
+    }
+  }
 
-  //   // }
-  //   // else if (hello_image_container.clientHeight <= hello_image.clientHeight && hello_image.style.height !== '') {
-  //   //   hello_image.style.objectFit = '';
-  //   //   hello_image.style.width = '';
-  //   // }
-  // }
+  function resizeOnMobile() {
+    if (isMobile()) {
+      const diff = window.screen.height - window.innerHeight;
+      // const hello_screen_title_container = document.querySelector('.js-hello-title-container');
 
-  // function dynamycResizeOnMobile() {
-  //   if (detectMob()) {
-  //     contacts.style.height = window.innerHeight + 'px';
-  //     menu.style.height = window.innerHeight + 'px';
-  //     menu_components.style.height = window.innerHeight + 'px';
-  //   }
-  // }
-
-  // function resizeOnMobile() {
-  //   if (detectMob()) {
-  //     const diff = window.screen.height - window.innerHeight;
-
-  //     hello_screen.style.height = window.screen.height - diff + 'px';
-  //     about.style.height = window.screen.height + 'px';
-  //   }
-  // }
+      hello_screen.style.height = window.screen.height - diff + 'px';
+      // hello_screen_title_container.style.height = window.screen.height - diff + 'px';
+      // about.style.height = window.screen.height + 'px';
+    }
+  }
 };

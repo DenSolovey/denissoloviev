@@ -2,8 +2,12 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 100lvh;
+  height: 100vh;
   padding: 6vw var(--section-horizontal-padding) 40px;
+  
+  .b-socials-button {
+    color: var(--color-on-background);
+  }
 
   &_title {
     margin-top: auto;
@@ -59,7 +63,5 @@
     width: fit-content;
   }
 
-  .b-socials-button {
-    color: var(--color-on-background);
-  }
+
 }

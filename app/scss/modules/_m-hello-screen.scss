@@ -1,16 +1,17 @@
 .m-hello-screen {
   display: grid;
   grid-template-columns: 62% 38%;
-  height: 100svh;
+  height: 100vh;
   min-height: 640px;
   overflow: hidden;
   background-color: var(--color-secondary);
 
+  
   &_title-container {
     display: flex;
     align-items: flex-end;
     min-width: 848px;
-    height: 100svh;
+    height: 100vh;
     min-height: 640px;
     padding: 182px var(--section-horizontal-padding) 152px;
     background-color: var(--color-secondary-background);
