@@ -4,17 +4,16 @@
   color: var(--color-light-text);
   cursor: pointer;
   @include Body-3;
-  transition: opacity ease-in-out 100ms,  color ease-in-out 100ms;
+  transition: opacity ease-in-out 100ms;
 
   @media (hover: hover){
 
     &:hover {
-      color: var(--color-primary);
       opacity: 0.5;
-    }}
+    }
+  }
 
   &.--md {
     @include Body-1;
-    font-weight: 300;
   }
 }
