@@ -10,14 +10,14 @@ export default function triggerHelloScreen() {
   const gsapFunctionsForSlides = {
     onStart: () => {
       if (!isContains(body, '--animation')) {
-        if (isMobile()) body.style.overflow = 'hidden';
+        if (isMobile()) body.style.overflowY = 'hidden';
         body.classList.add('--animation');
         disableScroll();
       }
     },
     onComplete: () => {
       if (isContains(body, '--animation')) {
-        if (isMobile()) body.style.overflow = 'auto';
+        if (isMobile()) body.style.overflowY = 'auto';
         body.classList.remove('--animation');
         enableScroll();
       }

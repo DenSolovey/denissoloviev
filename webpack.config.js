@@ -64,6 +64,7 @@ function MultiplePages(paths) {
 module.exports = {
   entry: {
     index: path.resolve(__dirname, './app/js/index.js'),
+    preload: path.resolve(__dirname, './app/js/preload.js'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -93,6 +94,24 @@ module.exports = {
           test: /[\\/]node_modules[\\/]/,
           chunks: 'all',
         },
+        // preload: {
+        //   name: 'preload',
+        //   test: /preloading\.(js|ts)$/,
+        //   chunks: 'all',
+        //   enforce: true,
+        // },
+        // index: {
+        //   name: 'index',
+        //   test: /index\.s?css$/,
+        //   chunks: 'all',
+        //   enforce: true,
+        // },
+        // preloading: {
+        //   name: 'preloading',
+        //   test: /preloading\.s?css$/,
+        //   chunks: 'all',
+        //   enforce: true,
+        // },
       },
     },
     minimizer: [
@@ -159,14 +178,12 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         enforce: 'pre',
-        loader: 'webpack-glob-loader'
+        loader: 'webpack-glob-loader',
       },
       {
         test: /\.s[ac]ss$/i,
         enforce: 'pre',
-        use: [
-          { loader: 'webpack-glob-loader' }
-        ]
+        use: [{ loader: 'webpack-glob-loader' }],
       },
       // Pug
       {

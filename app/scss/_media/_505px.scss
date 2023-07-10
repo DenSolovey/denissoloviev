@@ -7,4 +7,13 @@
   .m-about_text {
     width: 400px;
   }
+
+  .m-soft-skills {
+
+    padding: 164px var(--section-horizontal-padding) 144px;
+
+    &_image {
+      display: none;
+    }
+  }
 }

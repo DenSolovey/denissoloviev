@@ -1,0 +1,84 @@
+.b-progressbar {
+  width: 278px;
+  height: 2px;
+  overflow: hidden;
+
+  background: var(--color-on-background-secondary);
+  border-radius: 100px;
+  
+  svg {
+    height: 100%;
+
+    path {
+      fill: var(--color-primary);
+      stroke: var(--color-primary);
+    }
+  }
+}
+
+.m-on-loading {
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  transition: bottom ease-in-out 1000ms 1400ms;
+
+  &_container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-loading-background);
+  }
+
+  &_title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    opacity: 0;
+    transform: translate(-50%, -35%);
+    transition: transform ease-in-out 400ms 500ms, opacity ease-in-out 400ms 500ms;
+  }
+
+  &_progressbar {
+    transition: transform ease-in-out 400ms 400ms, opacity ease-in-out 400ms 400ms;
+  }
+
+  &_effect {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary);
+  }
+
+  &.--done {
+    bottom: 100%;
+  }
+
+  &.--done .m-on-loading_title {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &.--done .m-on-loading_progressbar {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  &.--done .m-on-loading_effect {
+    animation: effect ease-in-out 1200ms 1200ms;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+  .b-progressbar {
+    width: 120px;
+  }
+}

@@ -5,8 +5,6 @@ html(lang='ru')
   +m-head
   
   body.--noScroll
-    style
-      include ../../preload/__preload-onLoad.css
 
     +m-on-loading({attrs: {class: 'js-on-loading'}, title: 'Привет!'})
     
@@ -22,7 +20,7 @@ html(lang='ru')
             name: 'Кубанский ГАУ',
             course: 'Бакалавриат - Факультет прикладной информатики'
           })
-            p В качестве курсовых работ разработал игру на C++ “Поиск морфинг объектов” и мобильное приложение для андройд “Кухонный калькулятор”
+            p В качестве курсовых работ разработал игру на C++ “Поиск морфинг объектов” и мобильное приложение для андройд #[+b-link({attrs:{href: 'https://www.dropbox.com/s/fdfxtr373sdxbn6/kitchen-calculator.apk?dl=0', target: '_blank'}}): |“Кухонный калькулятор”]
             p Для диплома разработал плагин для фигмы #[+b-link({attrs:{href: 'https://www.figma.com/community/plugin/1042681939283501853/DS-Templater-(beta)', target: '_blank'}}): |DS-Templater] и защитил с отличием
 
 
@@ -86,7 +84,7 @@ html(lang='ru')
               href:'https://www.figma.com/community/plugin/1219008484601651003'
             },
             openOn: 'Открыть в Figma Community', 
-            imageLink:'https://s3-alpha-sig.figma.com/plugins/1219008484601651003/55440/29701537/07810278-a20c-4462-ad88-f5fed5bad229-cover?Expires=1687132800&Signature=IURy1TT2xxRTzTa0-9b0PB0ccEZe6pwTrqqU4qaDBbnJYuts~W8CGl2w0hdjBCYiUln5WAEIqpav6pwFf6RQAUI8ygoxxf6v~fTt9JaI-rbclDg8MjgWC-e~j-lJ1x1rVN~sFLPV-d~bWkQpSB~EYPBivFdXWOXCS9PiGyER8mQ0x~gIHFwljse9AEmvaTsdXKyWOIbkf7q~xXXd2yhuEg-tIwa~uStdiRZmB2uXuBSU5cVEC2TK6ydRhjSy1jDuGm3joR4Ig7flrtGLfrlCmKlkdkXlev9Bm6zZ-a8ZU6obozK6Pn~U7JKz7oSq9096pLZ7JOl82wi~XfB38i4ptQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+            imageLink:'../../assets/images/plugins/multiple-groups.jpg',
             alt: 'Multiple Groups',
             instruments: ['#Figma','#Plugin']
           }): |Multiple Groups
@@ -96,7 +94,7 @@ html(lang='ru')
               href:'https://www.figma.com/community/plugin/1052937551486129898/Unused-Styles-Remover'
             },
             openOn: 'Открыть в Figma Community', 
-            imageLink:'https://s3-alpha-sig.figma.com/plugins/1052937551486129898/38995/64264883/82b4504d-bb57-4637-a41f-aab7251a8457-cover?Expires=1687132800&Signature=CX19pi9Rfts1~ZpWgdBLl9BfV5kskNbzqbUUfuGvFVsJxBPiLJguzlvU2RfQ1MokVthdoWsxGyXHg4xaIUwhVlzYJ6tDcF5-tzmDNrcO3To15c1rPyfJdyKKCoWMbyoyB2uESU8YgxIB7llS8F5WQrKvx8GMSWh0il5zM3vmhEIhXZBwE9gELA~fTV9xMRD9oa2EhCQSqAtqc5GXWgLmDGaj1YrvBvdkvnTpR0PHh6saCkFuCpjqB42Fpq-YgfcYt9Zh6XRFhiSQyMPydpe0SpPz4P9ADfiPAXwMTWNub8TqF6qEGKWsXB-bmT5uezb4qJ8DjXGQ68TCRX2vy2mKKA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+            imageLink:'../../assets/images/plugins/unused-styles-remover.png',
             alt: 'Unused Styles Remover',
             instruments: ['#Figma','#Plugin']
           }): |Unused Styles Remover
@@ -106,7 +104,7 @@ html(lang='ru')
               href:'https://www.figma.com/community/plugin/1042681939283501853/DS-Templater-(beta)'
             },
             openOn: 'Открыть в Figma Community', 
-            imageLink:'https://s3-alpha-sig.figma.com/plugins/1042681939283501853/27567/30620093-e8ac-4d1d-8ba6-1c193f74b0d9-cover?Expires=1687132800&Signature=qbJ952w20KVztZoglE0uZe5EAnreWb5BL1XjdW2x~wCqL4digg65WxYBHcX7R4lGG4ayMKJ-KYL206-MQdlUdfToZYtMZp1ZCFcJTwSonr6upXHffIER6DuIEk9XlqfoJOubRkRGbJMNFp8eEQXgyZMZ4hAQqkYFMGeMXUPGmqZ4pldNZ3CLfcVMd51B1VLFf-Z2KhWIdQnHs8PA9BLuNkivDJqtTQZgfHGBAinM~XnITsv-XfQ13C~F4Pop1E~~0BRKUhR1BD~Kds5jS6GwWOEDew5D2F62KcdSsxF1E1va-httbownkEjjW0VtLjIqiVSSON4J0Is4UI~fAioNhw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+            imageLink:'../../assets/images/plugins/ds-templater.jpg',
             alt: 'DS-Templater (beta)',
             instruments: ['#Figma','#Plugin']
           }): |DS-Templater (beta)
@@ -114,7 +112,7 @@ html(lang='ru')
       section#skills
         +m-soft-skills({title: 'Мои личностные качества', attrs: {class: 'js-soft-skills-section'}})
           +b-skills-list-item({}): |Ответственность
-          +b-skills-list-item({}): |Энтузиазм
+          +b-skills-list-item({}): |Инициативность
           +b-skills-list-item({}): |Высокая самообучаемость
           +b-skills-list-item({}): |Целеустремленность
           +b-skills-list-item({}): |Спокойное отношение к критике

@@ -4,4 +4,17 @@
   :root {
     --h1-fs: 6vw;
   }
+
+  .m-hello-screen {
+
+    &_title-container {
+      min-width: 848px;
+    }
+
+    &_image {
+      min-width: 505px;
+    }
+  }
+
+
 }

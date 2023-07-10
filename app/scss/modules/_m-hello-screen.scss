@@ -10,10 +10,9 @@
   &_title-container {
     display: flex;
     align-items: flex-end;
-    min-width: 848px;
     height: 100vh;
     min-height: 640px;
-    padding: 182px var(--section-horizontal-padding) 152px;
+    padding: 182px var(--section-horizontal-padding) 132px;
     background-color: var(--color-secondary-background);
   }
 
@@ -26,7 +25,6 @@
   &_image {
     float: right;
     width: 100%;
-    min-width: 505px;
     object-fit: cover;
   }
 }

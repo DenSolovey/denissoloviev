@@ -11,4 +11,9 @@
   &_text {
     @include Body-2;
   }
+
+  &_level {
+    @include Body-2;
+    font-weight: 200;
+  }
 }

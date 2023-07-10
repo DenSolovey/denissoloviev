@@ -77,6 +77,10 @@
 
   .b-skills-list-item {
     padding: 20px 0px;
+    
+    &_level {
+      @include Body-2;
+    }
   }
 
   .c-menu-navigation {
@@ -207,10 +211,12 @@
     &_title-container {
       min-width: auto;
       min-height: auto;
-      padding: 0 6vw 11vw;
+      padding: 0 6vw 10vw;
     }
 
     &_image {
+      width: 100%;
+      min-width: auto;
       min-height: 320px;
     }
   }
@@ -286,7 +292,7 @@
     &_image {
       top: 80px;
       right: 16px;
-      width: 39%;
+      width: 36%;
     }
   }
 

@@ -4,7 +4,7 @@
 @mixin deviseFZ($type) {
   @if $type == 'desktop' {
     --h1-fs: 5vw;
-    --h1-lh: 140%;
+    --h1-lh: 135%;
 
     --h2-fs: 24px;
     --h2-lh: 32px;
@@ -22,7 +22,7 @@
     --body-3-lh: 44px;
   } @else if $type == 'mobile' {
     --h1-fs: 8.5vw;
-    --h1-lh: 140%;
+    --h1-lh: 135%;
 
     --h2-fs: 14px;
     --h2-lh: 18px;
