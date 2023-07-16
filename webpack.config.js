@@ -93,10 +93,10 @@ module.exports = {
           name: 'commons',
           test: /[\\/]node_modules[\\/]/,
           chunks: 'all',
-        },
+        }
         // preload: {
         //   name: 'preload',
-        //   test: /preloading\.(js|ts)$/,
+        //   test: /preload\.(js|ts)$/,
         //   chunks: 'all',
         //   enforce: true,
         // },
