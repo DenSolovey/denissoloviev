@@ -1,6 +1,8 @@
 export default async function copy(copyText) {
-  document.addEventListener('copy', function(e) {
-    e.clipboardData.setData('text/plain', copyText);
-    e.preventDefault();
- }, true);
+  let temp = document.createElement("input");
+  document.body.append(temp)
+  temp.value = copyText
+  temp.select();
+  document.execCommand('copy');
+  temp.remove();
 }
