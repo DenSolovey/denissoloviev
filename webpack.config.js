@@ -51,7 +51,7 @@ function MultiplePages(paths) {
     plugins.push(
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, html),
-        filename: `pages/${outName}.html`,
+        filename: `${outName}.html`,
         hash: true,
         minify: false,
         inject: 'body',
@@ -77,7 +77,7 @@ module.exports = {
     maxAssetSize: 512000,
   },
   devServer: {
-    open: '/pages',
+    open: '/',
     watchFiles: ['app/pug/**/*'],
     host: 'local-ip',
     port: 1200,

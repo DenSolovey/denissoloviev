@@ -17,13 +17,14 @@ html(lang='ru')
         +m-resume({attrs: {class: '--edu js-resume-section'}, title: 'Тут я обучался'})
           +c-resume-list-item({
             name: 'Кубанский ГАУ',
-            role: 'Бакалавр — ф-т прикладной информатики',
+            role: 'Бакалавр ф-т прикладной информатики',
             href: 'https://kubsau.ru/',
             site: 'kubsau.ru',
             dateRange: 'Сентябрь 2018 — Июль 2022',
             dateSize: '| 4 года'
           })
             ul
+              li Принимал участие в волонтерстве и различных мероприятиях от университета
               li В качестве курсовых работ разработал игру на C++ #[+b-link({attrs:{href: 'https://www.dropbox.com/s/y2jfkgfwg4rybye/%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BC%D0%BE%D1%80%D1%84%D0%B8%D0%BD%D0%B3%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%BE%D0%B2.exe?dl=0', target: '_blank'}}): |“Поиск морфинг объектов”] и мобильное приложение для андройд #[+b-link({attrs:{href: 'https://www.dropbox.com/s/fdfxtr373sdxbn6/kitchen-calculator.apk?dl=0', target: '_blank'}}): |“Кухонный калькулятор”]
               li Для диплома разработал плагин для фигмы #[+b-link({attrs:{href: 'https://www.figma.com/community/plugin/1042681939283501853/DS-Templater-(beta)', target: '_blank'}}): |DS-Templater] и защитил с отличием
 
@@ -39,8 +40,9 @@ html(lang='ru')
           })
             ul
               li Принимал участие в работе над улучшением опыта взаимодействия для сайтов от Агрокомплекса, Капики и КубГАУ
-              li Работал над дизайном писем и процессом их реализации
+              li Работал над дизайном писем и значительно улучшил процесс их реализации внедрив плагин, который позволяет конвертировать дизайн в код
               li Создавал кейсы для behance и постов в instagram
+              li Ввел атомарный подход в работу с макетами, благодаря которому снизилось недопонимание между дизайнером и фронтенд разработчиками
               li Разрабатывал прототипы интерфейсов и их макетов
               li Работал над такими проектами как #[+b-link({attrs:{href: 'https://www.behance.net/gallery/133615557/Dream-floor-Site-catalog', target: '_blank'}}): |Dream Floor], #[+b-link({attrs:{href: 'https://www.behance.net/gallery/145625335/Cooktoo-Cooking-Club-Landing-Page', target: '_blank'}}): |CookToo], #[+b-link({attrs:{href: 'https://www.behance.net/gallery/152635695/KubSAU-Agrarian-University-Course-aggregator', target: '_blank'}}): |Каталог курсов для КубГАУ], #[+b-link({attrs:{href: 'https://www.behance.net/gallery/154687371/Beseda-Restaraunt-Site-menu', target: '_blank'}}): |Меню для ресторана “Беседа”] и #[+b-link({attrs:{href: 'https://www.behance.net/gallery/165033253/Class-Shedule-for-KubSAU-PWA', target: '_blank'}}): |Расписание занятий для КубГАУ]
 
@@ -122,6 +124,7 @@ html(lang='ru')
           +b-skills-list-item({}): |Высокая самообучаемость
           +b-skills-list-item({}): |Целеустремленность
           +b-skills-list-item({}): |Спокойное отношение к критике
+          +b-skills-list-item({}): |Системность
 
 
         +m-hard-skills({title: 'Мой уровень владения <br> основным инструментарием', attrs: {class: 'js-hard-skills-section'}})
@@ -140,10 +143,13 @@ html(lang='ru')
 
 
         +m-others-skills({title: 'И еще немного обо мне', attrs: {class: 'js-others-skills-section'}})
-          +b-skills-list-item({}): |Знаком с методологией атомарного дизайна и активно им пользуюсь 
-          +b-skills-list-item({}): |Знаком с такими артефактами, как Персонажи, User Stories, User-Flow, Wire-Flow, Screen-Flow
-          +b-skills-list-item({}): |Ознакомлен с такими стайл-гайдами, как Material Design v2-3 и HIG
-          +b-skills-list-item({}): |Хорошо понимаю, как устроена front-end и мобильная разработка
+          +b-skills-list-item({}): |Знаком с такими артефактами, как: Персоны, User Story, User Story Map, Use Case, Customer Journey Map, User Flow, Wireframes, Wireflow, Screen Flow и карточная сортировка
+          +b-skills-list-item({}): |Ознакомлен с стайлгайдами по Material Design 2-3 и HIG
+          +b-skills-list-item({}): |Использую в работе метод атомарного дизайна
+          +b-skills-list-item({}): |Понимаю, как проводятся тестирования продукта
+          +b-skills-list-item({}): |Разбираюсь в front-end и мобильной разработке
+          +b-skills-list-item({}): |Номинально знаком со Scrum, Kanban, Scrumban, Waterfall, Lean, RICE и ICE методами и моделью Кано
+          +b-skills-list-item({}): |Знаком с AAARR и HEART метриками
 
 
       +m-contacts({attrs: {id: 'contacts', class: 'js-contacts-section'}})
