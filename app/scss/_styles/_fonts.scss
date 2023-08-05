@@ -21,7 +21,7 @@
     --body-3-fs: 32px;
     --body-3-lh: 44px;
   } @else if $type == 'mobile' {
-    --h1-fs: 8.5vw;
+    --h1-fs: 9.5vw;
     --h1-lh: 135%;
 
     --h2-fs: 14px;
@@ -44,6 +44,7 @@
 
 @mixin heading-family {
   font-family: Raleway, sans-serif;
+  font-variant-numeric: lining-nums;
 }
 
 @mixin body-family {
@@ -60,7 +61,7 @@
   font-size: var(--h2-fs);
   font-weight: 300;
   line-height: var(--h2-lh);
-  letter-spacing: -0.5px;
+  letter-spacing: 0;
 }
 
 @mixin Body-1 {

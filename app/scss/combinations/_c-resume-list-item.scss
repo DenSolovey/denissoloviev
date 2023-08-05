@@ -2,34 +2,47 @@
 
   &_title {
     display: flex;
-    gap: 8px;
-    flex-direction: row;
+    gap: 12px;
+    flex-direction: column;
+    padding: 16px 0px 6px;
+  }
+
+  &_row-1 {
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
-    box-sizing: border-box;
-    margin-bottom: 16px;
-    padding: 16px 0px;
-    border-bottom: 1px solid var(--color-on-background);
+    column-gap: 8px;
+    row-gap: 2px;
   }
 
   &_company-date {
     display: flex;
     gap: 16px;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: baseline;
     margin-right: 24px;
   }
 
   &_company {
     @include Body-3;
   }
-  
+
   &_link-or-course {
     width: fit-content;
   }
 
-  &_text p {
+  &_date {
+    margin-top: 1px;
+  }
+
+  &_text li {
     margin-top: 8px;
+    margin-left: 24px;
+    list-style-type: disc;
+  }
+  
+  .b-divider {
+    width: 100%;
   }
 }

@@ -17,8 +17,8 @@
     width: fit-content;
     height: fit-content;
     padding: 8px 16px;
-    opacity: 0;
     border: 1px solid var(--color-on-background-secondary);
+    opacity: 0;
     transform: translate(10%, -100%);
     transition: opacity ease-in-out 200ms, transform ease-in-out 200ms;
   

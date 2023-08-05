@@ -1,3 +1,13 @@
+@media only screen and (min-width: 1050px) {
+
+  .m-resume {  
+
+    &_title {
+      flex: none;
+      width: 20%;
+    }
+  }
+}
 @media only screen and (max-width: 1050px) {
 
   :root {

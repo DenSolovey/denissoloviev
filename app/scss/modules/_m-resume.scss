@@ -14,7 +14,7 @@
   &_list {
     display: flex;
     gap: 56px;
-    flex: 1;
+    flex: 3;
     flex-direction: column;
     width: 100%;
     min-width: 650px;
@@ -22,8 +22,12 @@
   }
 
   &_title {
-    width: 20%;
+    display: flex;
+    flex: 1 0 0;
+    flex-wrap: wrap;
     min-width: 210px;
+    max-width: 400px;
+    column-gap: 7px;
   }
 
   &.--edu {
