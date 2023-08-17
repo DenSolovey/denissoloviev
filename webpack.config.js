@@ -30,15 +30,6 @@ let plugins = [
   new MiniCssExtractPlugin({
     filename: 'css/[name].[contenthash].css',
   }),
-  // new CopyWebpackPlugin({
-  //   patterns: [
-  //     {
-  //       from: './app/assets',
-  //       to: './assets',
-  //       noErrorOnMissing: true,
-  //     },
-  //   ],
-  // }),
 ];
 MultiplePages(glob.sync('./app/pug/pages/*.pug'));
 
