@@ -1,4 +1,7 @@
 //// ================================ Imports ======================================
+import '../assets/images/socials-thumbnail.jpg'
+import '../assets/images/vk-socials-thumbnail.jpg'
+
 //scss
 import '../scss/index.scss';
 
