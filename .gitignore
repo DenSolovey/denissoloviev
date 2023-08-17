@@ -1,3 +1,9 @@
 dist/
 node_modules/
 package-lock.json
+public_html/
+.vscode-server/
+.npm/
+.local/
+.config/
+.cache/
