@@ -57,7 +57,7 @@ module.exports = {
     preload: path.resolve(__dirname, './app/js/preload.js'),
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'public_html'),
     filename: 'js/[name].[contenthash].js',
     clean: true,
   },
