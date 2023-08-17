@@ -7,3 +7,5 @@ public_html/
 .local/
 .config/
 .cache/
+.bash_history
+.wget-hsts
