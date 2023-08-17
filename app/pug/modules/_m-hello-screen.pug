@@ -4,4 +4,4 @@ mixin m-hello-screen(params)
       .m-hello-screen_title-container.js-hello-title-container
         h1.m-hello-screen_title: |!{params.title}
     .m-hello-screen_grid-image-container
-      img(src="../../assets/images/primary-image.jpg", alt="Primary Image").m-hello-screen_image
+      img(src=require("../../assets/images/primary-image.jpg"), alt="Primary Image").m-hello-screen_image

@@ -2,22 +2,19 @@ mixin m-head
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    meta(property='vk:image', content='')
+    meta(property='vk:image', content='./assets/images/vk-socials-thumbnail')
     meta(property='vk:image:type', content='image/png')
     meta(property='vk:title', content='Denis Soloviev | UX/UI Designer')
-    meta(property='vk:description', content='')
-    meta(property='og:image', content='')
+    meta(property='og:image', content='./assets/images/socials-thumbnail')
     meta(property='og:image:type', content='image/png')
     meta(property='og:title', content='Denis Soloviev | UX/UI Designer')
-    meta(property='og:description', content='')
-    meta(property='twitter:image', content='')
+    meta(property='twitter:image', content='./assets/images/socials-thumbnail')
     meta(property='twitter:image:type', content='image/png')
     meta(property='twitter:title', content='Denis Soloviev | UX/UI Designer')
-    meta(property='twitter:description', content='')
     meta(name='author' content='Denis Soloviev')
     title Denis Soloviev | UX/UI Designer
-    link(type="image/png" href="../../assets/images/32x32.png" rel='icon')
-    link(type='image/svg+xml' href="../../assets/icons/logo.svg" rel='icon')
-    link(href="../../assets/images/retina-6.png" rel='apple-touch-icon')
+    link(type="image/png" href=require("../../assets/images/32x32.png") rel='icon')
+    link(type='image/svg+xml' href=require("../../assets/icons/logo.svg") rel='icon')
+    link(href=require("../../assets/images/retina-6.png") rel='apple-touch-icon')
 
     block

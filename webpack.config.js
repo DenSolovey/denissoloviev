@@ -2,7 +2,6 @@ const path = require('path'),
   glob = require('glob'),
   HtmlWebpackPlugin = require('html-webpack-plugin'),
   MiniCssExtractPlugin = require('mini-css-extract-plugin'),
-  CopyWebpackPlugin = require('copy-webpack-plugin'),
   ImageMinimizerPlugin = require('image-minimizer-webpack-plugin'),
   TerserPlugin = require('terser-webpack-plugin'),
   webpack = require('webpack');
@@ -31,15 +30,15 @@ let plugins = [
   new MiniCssExtractPlugin({
     filename: 'css/[name].[contenthash].css',
   }),
-  new CopyWebpackPlugin({
-    patterns: [
-      {
-        from: './app/assets',
-        to: './assets',
-        noErrorOnMissing: true,
-      },
-    ],
-  }),
+  // new CopyWebpackPlugin({
+  //   patterns: [
+  //     {
+  //       from: './app/assets',
+  //       to: './assets',
+  //       noErrorOnMissing: true,
+  //     },
+  //   ],
+  // }),
 ];
 MultiplePages(glob.sync('./app/pug/pages/*.pug'));
 
@@ -93,25 +92,7 @@ module.exports = {
           name: 'commons',
           test: /[\\/]node_modules[\\/]/,
           chunks: 'all',
-        }
-        // preload: {
-        //   name: 'preload',
-        //   test: /preload\.(js|ts)$/,
-        //   chunks: 'all',
-        //   enforce: true,
-        // },
-        // index: {
-        //   name: 'index',
-        //   test: /index\.s?css$/,
-        //   chunks: 'all',
-        //   enforce: true,
-        // },
-        // preloading: {
-        //   name: 'preloading',
-        //   test: /preloading\.s?css$/,
-        //   chunks: 'all',
-        //   enforce: true,
-        // },
+        },
       },
     },
     minimizer: [
@@ -189,7 +170,7 @@ module.exports = {
       {
         test: /\.pug$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'pug-loader',
+        loader: 'simple-pug-loader',
         options: {
           pretty: true,
         },
@@ -238,6 +219,22 @@ module.exports = {
             },
           }
         : undefined,
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
+        include: path.resolve(__dirname, "app"),
+        generator : {
+          filename : 'assets/[name][ext][query]',
+        },
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        include: path.resolve(__dirname, "app"),
+        generator : {
+          filename : 'fonts/[name][ext][query]',
+        },
+        type: 'asset/resource',
+      },
     ].filter((x) => x !== undefined),
   },
 };
