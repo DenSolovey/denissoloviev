@@ -29,27 +29,26 @@ mixin index-body(params)
               li В качестве курсовых работ разработал игру на C++ #[+b-link({attrs:{href: 'https://drive.google.com/file/d/11qD-fZ-2nn-kbpGliNvQB5bZmRD1RwsD/view?usp=sharing', target: '_blank'}}): |“Поиск морфинг объектов”] и мобильное приложение для андройд #[+b-link({attrs:{href: 'https://drive.google.com/file/d/127LYhyFsKtF67ubYMhfUnKn3ikE--Pk-/view?usp=sharing', target: '_blank'}}): |“Кухонный калькулятор”]
               li Для диплома разработал плагин для фигмы #[+b-link({attrs:{href: 'https://www.figma.com/community/plugin/1042681939283501853/DS-Templater-(beta)', target: '_blank'}}): |DS-Templater] и защитил с отличием
         
-        +m-resume({attrs: {class: '--job'}, title: 'А тут я работал ', date: '1 год 10 месяцев'})
+        +m-resume({attrs: {class: '--job'}, title: 'А тут я работал ', date: '2 года'})
           +c-resume-list-item({
             name: 'ASTEQ',
-            role: 'Дизайнер',
+            role: 'Веб-дизайнер',
             href: 'https://asteq.ru/',
             site: 'asteq.ru',
-            dateRange: 'Август 2021 — Апрель 2023',
-            dateSize: '| 1 год 10 месяцев'
+            dateRange: 'Май 2021 — Апрель 2023',  
+            dateSize: '| 2 года'
           })
             ul
-              li Принимал участие в работе над улучшением опыта взаимодействия для сайтов от Агрокомплекса, Капики и КубГАУ
+              li Принимал участие в работе над сайтами от Агрокомплекса, Капики, Кубанского ГАУ, Добрынинского, Россети
               li Работал над дизайном писем и значительно улучшил процесс их реализации внедрив плагин, который позволяет конвертировать дизайн в код
-              li Создавал кейсы для behance и постов в instagram
               li Ввел атомарный подход в работу с макетами, благодаря которому снизилось недопонимание между дизайнером и фронтенд разработчиками
-              li Разрабатывал прототипы интерфейсов и их макетов
-              li Работал над такими проектами как #[+b-link({attrs:{href: 'https://www.behance.net/gallery/133615557/Dream-floor-Site-catalog', target: '_blank'}}): |Dream Floor], #[+b-link({attrs:{href: 'https://www.behance.net/gallery/145625335/Cooktoo-Cooking-Club-Landing-Page', target: '_blank'}}): |CookToo], #[+b-link({attrs:{href: 'https://www.behance.net/gallery/152635695/KubSAU-Agrarian-University-Course-aggregator', target: '_blank'}}): |Каталог курсов для КубГАУ], #[+b-link({attrs:{href: 'https://www.behance.net/gallery/154687371/Beseda-Restaraunt-Site-menu', target: '_blank'}}): |Меню для ресторана “Беседа”] и #[+b-link({attrs:{href: 'https://www.behance.net/gallery/165033253/Class-Shedule-for-KubSAU-PWA', target: '_blank'}}): |Расписание занятий для КубГАУ]
+              li Создавал кейсы для behance и постов в instagram
+              li Работал над такими проектами как: #[+b-link({attrs:{href: 'https://www.behance.net/gallery/133615557/Dream-floor-Site-catalog', target: '_blank'}}): |Сайт-каталог для Dream Floor], #[+b-link({attrs:{href: 'https://www.behance.net/gallery/145625335/Cooktoo-Cooking-Club-Landing-Page', target: '_blank'}}): |Лендинг пейдж для CookToo], #[+b-link({attrs:{href: 'https://www.behance.net/gallery/152635695/KubSAU-Agrarian-University-Course-aggregator', target: '_blank'}}): |Каталог курсов для КубГАУ], #[+b-link({attrs:{href: 'https://www.behance.net/gallery/154687371/Beseda-Restaraunt-Site-menu', target: '_blank'}}): |Меню для ресторана “Беседа”], #[+b-link({attrs:{href: 'https://www.behance.net/gallery/165033253/Class-Shedule-for-KubSAU-PWA', target: '_blank'}}): |Расписание занятий для КубГАУ], Интернет-магазин для Labinsk Beef, Мобильное приложение-отзовик "Зацени"! и Сайт для железнодорожной компании ATL
 
       section#portfolio
         +m-portfolio({attrs: {class: '--external'},title: 'Проекты над которыми я работал'})
           +c-portfolio-card({
-            attrs:{href:'https://www.behance.net/gallery/165033253/Class-Shedule-for-KubSAU-PWA'},
+            attrs:{href:'https://mir-s3-cdn-cf.behance.net/projects/404/e6a29b165033253.Y3JvcCwxNTgwLDEyMzYsMyww.jpg'},
             openOn: 'Открыть на Behance', 
             imageLink:'https://mir-s3-cdn-cf.behance.net/projects/808/494fb8165033253.Y3JvcCwxNTgwLDEyMzYsMyww.jpg',
             alt: 'Рассписание занятий для Кубанского ГАУ',
@@ -119,13 +118,14 @@ mixin index-body(params)
 
       section#skills
         +m-others-skills({title: 'Немного о моих знаниях', attrs: {class: 'js-others-skills-section'}})
-          +b-skills-list-item({}): |Знаком с такими артефактами, как: Персоны, User Story, User Story Map, Use Case, Customer Journey Map, User Flow, Wireframes, Wireflow, Screen Flow и карточная сортировка
+          +b-skills-list-item({}): |Знаю, как работать с User Story, User Story Map, User Flow, Wire Flow, Screen Flow, Wireframes
+          +b-skills-list-item({}): |Знаком с такими артефактами, как: Персоны, User Story, User Story Map, Service Blueprint и карточная сортировка
           +b-skills-list-item({}): |Ознакомлен с стайлгайдами по Material Design 2-3 и HIG
           +b-skills-list-item({}): |Использую в работе метод атомарного дизайна
-          +b-skills-list-item({}): |Понимаю, как проводятся тестирования продукта
-          +b-skills-list-item({}): |Разбираюсь в front-end и мобильной разработке
+          +b-skills-list-item({}): |Знаю как проводятся юзабилити тестирования
+          +b-skills-list-item({}): |Разбираюсь в front-end и мобильной разработках
           +b-skills-list-item({}): |Знаком со Scrum, Kanban, Scrumban, Waterfall, Lean, RICE и ICE методами и моделью Кано
-          +b-skills-list-item({}): |Знаком с AARRR и HEART метриками
+          +b-skills-list-item({}): |Знаком с SUS, SEQ, UMUX, UMUX-lite метриками и AARRR и HEART фреймворками
         +m-hard-skills({title: 'Мой уровень владения <br> основным инструментарием', attrs: {class: 'js-hard-skills-section'}})
           +b-skills-list-item({level: 'Очень высокий'}): |Figma
           +b-skills-list-item({level: 'Высокий'}): |Protopie
