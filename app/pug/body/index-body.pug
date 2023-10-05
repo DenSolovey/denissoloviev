@@ -3,7 +3,7 @@ mixin index-body(params)
     +m-on-loading({attrs: {class: 'js-on-loading'}, title: 'Привет!'})
     
     main
-      +m-hello-screen({attrs: {class: 'js-hello-section'}, title:'Меня зовут Денис<br>и я UX/UI дизайнер'})
+      +m-hello-screen({attrs: {class: 'js-hello-section'}, title:'Меня зовут Денис<br>и я дизайнер'})
       section#about
         +m-about({attrs: {class: 'js-about-section'},title: 'Пара строк обо мне'})
           |Я придерживаюсь философии минимализма и уделяю особое внимание эстетике, качеству своей работы и взаимодейсвию с командой
@@ -40,10 +40,11 @@ mixin index-body(params)
             dateSize: '| 2 года'
           })
             ul
-              li Проводил юзабилити тестирования
-              li Создавал UI-киты для проектов и ввел атомарный подход в работу с макетами
-              li Снизил недопонимание между дизайнером и фронтенд разработчиками
+              li Создавал UI-киты для проектов и ввел атомарный подход в работу с макетами, благодаря которому сильно снизилось недопонимание между дизайнером и фронтенд разработчиками
+              li Обрабатывал графические материалы в Adobe Photoshop и Adobe Illustrator
+              li Разрабатывал концепции и создавал адаптивный дизайн разных сайтов, мобильных приложений в Figma, баннеров,  наполнения для сайтов.
               li Работал над дизайном писем и значительно улучшил процесс их реализации
+              li Занимался прототипированием и скетчингом
               li Принимал участие в работе над сайтами от Агрокомплекса, Капики, Кубанского ГАУ, Добрынинского, Россети
               li Работал над такими проектами как: #[+b-link({attrs:{href: 'https://www.behance.net/gallery/133615557/Dream-floor-Site-catalog', target: '_blank'}}): |Каталог для производителя напольных покрытий «Dream Floor»], #[+b-link({attrs:{href: 'https://www.behance.net/gallery/145625335/Cooktoo-Cooking-Club-Landing-Page', target: '_blank'}}): |Одностраничник для онлайн-ресторана «CookToo»], #[+b-link({attrs:{href: 'https://www.behance.net/gallery/152635695/KubSAU-Agrarian-University-Course-aggregator', target: '_blank'}}): |Каталог курсов для КубГАУ], #[+b-link({attrs:{href: 'https://www.behance.net/gallery/154687371/Beseda-Restaraunt-Site-menu', target: '_blank'}}): |Меню для ресторана «Беседа»], #[+b-link({attrs:{href: 'https://www.behance.net/gallery/165033253/Class-Shedule-for-KubSAU-PWA', target: '_blank'}}): |Расписание занятий для КубГАУ], Интернет-магазин для производителя мраморной говядины «Labinsk Beef», Мобильное приложение-отзовик «Зацени!» и Сайт для железнодорожной компании «ATL»
               li Создавал кейсы для Behance и посты в Instagram
@@ -120,22 +121,22 @@ mixin index-body(params)
           }): |DS-Templater (beta)
 
       section#skills
-        +m-others-skills({title: 'О моих знаниях и навыках', attrs: {class: 'js-others-skills-section'}})
-          +b-skills-list-item({}): |Умею работать над UI-китами, создавать адаптивный дизайн, работать с командой и владею Figma на профессиональном уровне
-          +b-skills-list-item({}): |Глубоко понимаю принципы дизайна пользовательского интерфейса, в том числе правила типографики и композиции и теорию цвета
-          +b-skills-list-item({}): |Знаю, как работать с User Story, User Story Map, User Flow, Wire Flow, Screen Flow и Wireframes
-          +b-skills-list-item({}): |Знаком с такими артефактами, как: Персоны, Карта эмпатии, Use Cases, Customer Journey Map, Service Blueprint и Карточная сортировка
-          +b-skills-list-item({}): |Могу готовить подробные и проработанные экраны и описание логики интерфейса для разработчиков
-          +b-skills-list-item({}): |Ознакомлен со стайлгайдами по Material Design 2-3 и HIG
-          +b-skills-list-item({}): |Имею опыт проведения UX-исследований и разбираюсь в UX артефактах
-          +b-skills-list-item({}): |Знаю как работать с письмами для e-mail рассылок
-          +b-skills-list-item({}): |Знаю как проводятся юзабилити тестирования
-          +b-skills-list-item({}): |Использую в работе метод атомарного дизайна
-          +b-skills-list-item({}): |Знаком с SUS, SEQ, UMUX, UMUX-lite метриками и AARRR, HEART фреймворками
-          +b-skills-list-item({}): |Разбираюсь в front-end и мобильной разработках
-          +b-skills-list-item({}): |Разрабатываю плагины для Figma в качестве хобби
-          +b-skills-list-item({}): |Знаком с RICE и ICE методиками и Моделью Кано
-          +b-skills-list-item({}): |Знаком со Scrum, Kanban, Scrumban, Waterfall и Lean
+        //- +m-others-skills({title: 'О моих знаниях и навыках', attrs: {class: 'js-others-skills-section'}})
+        //-   +b-skills-list-item({}): |Умею работать над UI-китами, создавать адаптивный дизайн, работать с командой и владею Figma на профессиональном уровне
+        //-   +b-skills-list-item({}): |Глубоко понимаю принципы дизайна пользовательского интерфейса, в том числе правила типографики и композиции и теорию цвета
+        //-   +b-skills-list-item({}): |Знаю, как работать с User Story, User Story Map, User Flow, Wire Flow, Screen Flow и Wireframes
+        //-   +b-skills-list-item({}): |Знаком с такими артефактами, как: Персоны, Карта эмпатии, Use Cases, Customer Journey Map, Service Blueprint и Карточная сортировка
+        //-   +b-skills-list-item({}): |Могу готовить подробные и проработанные экраны и описание логики интерфейса для разработчиков
+        //-   +b-skills-list-item({}): |Ознакомлен со стайлгайдами по Material Design 2-3 и HIG
+        //-   +b-skills-list-item({}): |Имею опыт проведения UX-исследований и разбираюсь в UX артефактах
+        //-   +b-skills-list-item({}): |Знаю как работать с письмами для e-mail рассылок
+        //-   +b-skills-list-item({}): |Знаю как проводятся юзабилити тестирования
+        //-   +b-skills-list-item({}): |Использую в работе метод атомарного дизайна
+        //-   +b-skills-list-item({}): |Знаком с SUS, SEQ, UMUX, UMUX-lite метриками и AARRR, HEART фреймворками
+        //-   +b-skills-list-item({}): |Разбираюсь в front-end и мобильной разработках
+        //-   +b-skills-list-item({}): |Разрабатываю плагины для Figma в качестве хобби
+        //-   +b-skills-list-item({}): |Знаком с RICE и ICE методиками и Моделью Кано
+        //-   +b-skills-list-item({}): |Знаком со Scrum, Kanban, Scrumban, Waterfall и Lean
         +m-hard-skills({title: 'Мой уровень владения <br> основным инструментарием', attrs: {class: 'js-hard-skills-section'}})
           +b-skills-list-item({level: 'Очень высокий'}): |Figma
           +b-skills-list-item({level: 'Высокий'}): |Protopie
