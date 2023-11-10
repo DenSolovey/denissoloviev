@@ -244,7 +244,7 @@
 
     &.--job {
       padding-top: 56px;
-      padding-bottom: 144px;
+      padding-bottom: 96px;
     }
 
     &_list {
@@ -259,7 +259,7 @@
   .m-portfolio {
     $parent: &;
 
-    padding: 144px var(--section-horizontal-padding);
+    padding: 144px var(--section-horizontal-padding) 100px;
 
     &_cards {
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -297,7 +297,15 @@
   }
 
   .m-hard-skills {
-    padding-bottom: 144px;
+    padding-bottom: 48px;
+
+    &:first-child {
+      padding-bottom: 30px;
+    }
+
+    &:last-child {
+      padding-top: 70px;
+    }
 
     &_title {
       width: 240px;

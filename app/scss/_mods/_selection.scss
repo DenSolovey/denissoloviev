@@ -2,3 +2,12 @@
   color: var(--color-light-text);
   background-color: #c700c1;
 }
+
+.ul-heading {
+  padding-top: 10px;
+}
+
+.no-dot {
+  margin-left: 0 !important;
+  list-style-type: none !important;
+}

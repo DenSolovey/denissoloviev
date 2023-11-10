@@ -3,18 +3,18 @@ mixin index-body(params)
     +m-on-loading({attrs: {class: 'js-on-loading'}, title: 'Привет!'})
     
     main
-      +m-hello-screen({attrs: {class: 'js-hello-section'}, title:'Меня зовут Денис<br>и я дизайнер'})
+      +m-hello-screen({attrs: {class: 'js-hello-section'}, title:'Меня зовут Денис<br>и я UX/UI дизайнер'})
       section#about
         +m-about({attrs: {class: 'js-about-section'},title: 'Пара строк обо мне'})
           |Я придерживаюсь философии минимализма и уделяю особое внимание эстетике, качеству своей работы и взаимодейсвию с командой
-        +m-soft-skills({title: 'Мои личностные качества', attrs: {class: 'js-soft-skills-section'}})
-          +b-skills-list-item({}): |Ответственность
-          +b-skills-list-item({}): |Инициативность
-          +b-skills-list-item({}): |Высокая самообучаемость
-          +b-skills-list-item({}): |Целеустремленность
-          +b-skills-list-item({}): |Спокойное отношение к критике
-          +b-skills-list-item({}): |Системность
-          +b-skills-list-item({}): |Любопытность
+        //- +m-soft-skills({title: 'Мои личностные качества', attrs: {class: 'js-soft-skills-section'}})
+        //-   +b-skills-list-item({}): |Ответственность
+        //-   +b-skills-list-item({}): |Инициативность
+        //-   +b-skills-list-item({}): |Высокая самообучаемость
+        //-   +b-skills-list-item({}): |Целеустремленность
+        //-   +b-skills-list-item({}): |Спокойное отношение к критике
+        //-   +b-skills-list-item({}): |Системность
+        //-   +b-skills-list-item({}): |Любопытность
       section#expiriense
         +m-resume({attrs: {class: '--edu js-resume-section'}, title: 'Тут я обучался'})
           +c-resume-list-item({
@@ -30,63 +30,109 @@ mixin index-body(params)
               li В качестве курсовых работ разработал игру на C++ #[+b-link({attrs:{href: 'https://drive.google.com/file/d/11qD-fZ-2nn-kbpGliNvQB5bZmRD1RwsD/view?usp=sharing', target: '_blank'}}): |«Поиск морфинг объектов»] и мобильное приложение для андройд #[+b-link({attrs:{href: 'https://drive.google.com/file/d/127LYhyFsKtF67ubYMhfUnKn3ikE--Pk-/view?usp=sharing', target: '_blank'}}): |«Кухонный калькулятор»]
               li Для диплома разработал плагин для фигмы #[+b-link({attrs:{href: 'https://www.figma.com/community/plugin/1042681939283501853/DS-Templater-(beta)', target: '_blank'}}): |«DS-Templater»] и защитил с отличием
         
-        +m-resume({attrs: {class: '--job'}, title: 'А тут я работал ', date: '2 года'})
+        +m-resume({attrs: {class: '--job'}, title: 'А тут я работал ', date: '4 года 1 месяц'})
           +c-resume-list-item({
-            name: 'ASTEQ',
-            role: 'Веб-дизайнер',
-            href: 'https://asteq.ru/',
-            site: 'asteq.ru',
-            dateRange: 'Май 2021 — Апрель 2023',  
+            name: 'Кубанский ГАУ',
+            role: 'Дизайнер',
+            href: 'https://kubsau.ru/',
+            site: 'kubsau.ru',
+            dateRange: 'Июнь 2019 — май 2021',  
             dateSize: '| 2 года'
           })
             ul
-              li Создавал UI-киты для проектов и ввел атомарный подход в работу с макетами, благодаря которому сильно снизилось недопонимание между дизайнером и фронтенд разработчиками
-              li Обрабатывал графические материалы в Adobe Photoshop и Adobe Illustrator
-              li Разрабатывал концепции и создавал адаптивный дизайн разных сайтов, мобильных приложений в Figma, баннеров,  наполнения для сайтов.
-              li Работал над дизайном писем и значительно улучшил процесс их реализации
-              li Занимался прототипированием и скетчингом
-              li Принимал участие в работе над сайтами от Агрокомплекса, Капики, Кубанского ГАУ, Добрынинского, Россети
-              li Работал над такими проектами как: #[+b-link({attrs:{href: 'https://www.behance.net/gallery/133615557/Dream-floor-Site-catalog', target: '_blank'}}): |Каталог для производителя напольных покрытий «Dream Floor»], #[+b-link({attrs:{href: 'https://www.behance.net/gallery/145625335/Cooktoo-Cooking-Club-Landing-Page', target: '_blank'}}): |Одностраничник для онлайн-ресторана «CookToo»], #[+b-link({attrs:{href: 'https://www.behance.net/gallery/152635695/KubSAU-Agrarian-University-Course-aggregator', target: '_blank'}}): |Каталог курсов для КубГАУ], #[+b-link({attrs:{href: 'https://www.behance.net/gallery/154687371/Beseda-Restaraunt-Site-menu', target: '_blank'}}): |Меню для ресторана «Беседа»], #[+b-link({attrs:{href: 'https://www.behance.net/gallery/165033253/Class-Shedule-for-KubSAU-PWA', target: '_blank'}}): |Расписание занятий для КубГАУ], Интернет-магазин для производителя мраморной говядины «Labinsk Beef», Мобильное приложение-отзовик «Зацени!» и Сайт для железнодорожной компании «ATL»
-              li Создавал кейсы для Behance и посты в Instagram
+              b Обязанности
+              li Разработка презнетаций, креативов для полиграфии, материалов и редизайна для сайта
+            ul.ul-heading
+              b Инстрменты
+              li.no-dot Figma — Protopie — Adobe Photoshop — Adobe Illustrator — PowerPoint
+          
+          +c-resume-list-item({
+            name: 'ASTEQ',
+            role: 'Web-дизайнер',
+            href: 'https://asteq.ru/',
+            site: 'asteq.ru',
+            dateRange: 'Май 2021 — май 2023',  
+            dateSize: '| 2 года 1 месяц'
+          })
+            ul 
+              b Достижения
+              li Улучшил качество работы с макетами, благодаря чему качество разработки выросло и её скорость увеличилась в 2 раза
+              li Оптимизировал процесс реализации писем, упростив работу разработчиков до внесения небольших корректировок
+              li Разработал дизайн сайта-меню для ресторанов за 4 дня
+            ul.ul-heading
+              b Обязанности
+              li Разработка креативных решений для сайтов и поддержка дизайна существующих интерфейсов
+              li Cкетчинг, прототипирование и создание адаптивного дизайна писем, сайтов и мобильных приложений в Figma
+              li Изготовление баннеров, визуального контента для сайтов и мобильных приложений, креативов для соцсетей и работа над анимацией
+            ul.ul-heading
+              b Инстрменты
+              li.no-dot Figma — Protopie — Adobe Photoshop — Adobe Illustrator — Adobe After Effects — Blender 3D
 
       section#portfolio
         +m-portfolio({attrs: {class: '--external'},title: 'Проекты над которыми я работал'})
           +c-portfolio-card({
             attrs:{href:'https://www.behance.net/gallery/165033253/Class-Shedule-for-KubSAU-PWA'},
             openOn: 'Открыть на Behance', 
-            imageLink:'https://mir-s3-cdn-cf.behance.net/projects/808/e6a29b165033253.Y3JvcCwxNTgwLDEyMzYsMyww.jpg',
+            imageLink:require('../../assets/images/cases/Kubsau-Shedule.jpg'),
             alt: 'Рассписание занятий для Кубанского ГАУ',
             instruments: ['#Figma', '#After Effects']
           }): |Рассписание занятий для КубГАУ
           +c-portfolio-card({
             attrs:{href:'https://www.behance.net/gallery/154687371/Beseda-Restaraunt-Site-menu'},
             openOn: 'Открыть на Behance', 
-            imageLink:'https://mir-s3-cdn-cf.behance.net/projects/808/245a25154687371.Y3JvcCwxNTgwLDEyMzYsMyww.jpg',
+            imageLink:require('../../assets/images/cases/Beseda.jpg'),
             alt: 'Меню для ресторана «Беседа»',
             instruments: ['#Figma','#Protopie', '#After Effects']
           }): |Меню для ресторана «Беседа»
           +c-portfolio-card({
             attrs:{href:'https://www.behance.net/gallery/152635695/KubSAU-Agrarian-University-Course-aggregator'},
             openOn: 'Открыть на Behance', 
-            imageLink:'https://mir-s3-cdn-cf.behance.net/projects/808/6a704e152635695.Y3JvcCwxNTgwLDEyMzYsMyww.jpg',
+            imageLink:require('../../assets/images/cases/Kubsau-Courses.jpg'),
             alt: 'Каталог курсов для Кубанского ГАУ',
             instruments: ['#Figma','#Protopie','#Blender', '#After Effects']
           }): |Каталог курсов для КубГАУ
           +c-portfolio-card({
             attrs:{href:'https://www.behance.net/gallery/145625335/Cooktoo-Cooking-Club-Landing-Page'},
             openOn: 'Открыть на Behance', 
-            imageLink:'https://mir-s3-cdn-cf.behance.net/projects/808/e0c2f8145625335.Y3JvcCwxNTgwLDEyMzYsMyww.jpg',
+            imageLink:require('../../assets/images/cases/Cooktoo.jpg'),
             alt: 'Одностраничник для онлайн-ресторана «CookToo»',
             instruments:  ['#Figma','#Protopie','#Photoshop', '#After Effects']
           }): |Одностраничник для онлайн-ресторана «CookToo»
           +c-portfolio-card({
             attrs:{href:'https://www.behance.net/gallery/133615557/Dream-floor-Site-catalog'},
             openOn: 'Открыть на Behance', 
-            imageLink:'https://mir-s3-cdn-cf.behance.net/projects/808/832aa2133615557.Y3JvcCwxNTgwLDEyMzYsMyww.jpg',
+            imageLink:require('../../assets/images/cases/Dream-floor.jpg'),
             alt: 'Каталог для производителя напольных покрытий «Dream Floor»',
             instruments: ['#Figma','#Illustrator', '#After Effects']
           }): |Каталог для производителя напольных покрытий «Dream Floor»
-
+          +c-portfolio-card({
+            attrs:{href:'https://www.behance.net/gallery/128860601/Art-Gallery-mrLunin'},
+            openOn: 'Открыть на Behance', 
+            imageLink:require('../../assets/images/cases/lunin.jpg'),
+            alt: 'Арт-галерея «mr.Lulin»',
+            instruments: ['#Figma', '#After Effects']
+          }): |Арт-галерея «mr.Lulin»
+          +c-portfolio-card({
+            attrs:{href:'https://www.behance.net/gallery/128632389/Villa-Castalia'},
+            openOn: 'Открыть на Behance', 
+            imageLink:require('../../assets/images/cases/castalia.jpg'),
+            alt: 'Корпоративный сайт для спа-комплекса «Villa Castalia»',
+            instruments: ['#Figma']
+          }): |Корпоративный сайт для спа-комплекса «Villa Castalia»
+          +c-portfolio-card({
+            attrs:{href:'https://www.behance.net/gallery/146150231/Toys-chest'},
+            openOn: 'Открыть на Behance', 
+            imageLink:require('../../assets/images/cases/toys.jpg'),
+            alt: 'Интернет-магазин игрушек «Toys Chest»',
+            instruments: ['#Figma', '#Photoshop']
+          }): |Интернет-магазин игрушек «Toys Chest»
+          +c-portfolio-card({
+            attrs:{href:'https://www.behance.net/gallery/128015731/Kukusiki'},
+            openOn: 'Открыть на Behance', 
+            imageLink:require('../../assets/images/cases/kukusiki.png'),
+            alt: 'Одностраничник для производителя снеков «Кукусики»',
+            instruments: ['#Figma']
+          }): |Одностраничник для производителя снеков «Кукусики»
 
         +m-portfolio({attrs: {class: '--personal'}, title: 'Мои личные проекты'})
           +c-portfolio-card({
@@ -137,17 +183,17 @@ mixin index-body(params)
         //-   +b-skills-list-item({}): |Разрабатываю плагины для Figma в качестве хобби
         //-   +b-skills-list-item({}): |Знаком с RICE и ICE методиками и Моделью Кано
         //-   +b-skills-list-item({}): |Знаком со Scrum, Kanban, Scrumban, Waterfall и Lean
-        +m-hard-skills({title: 'Мой уровень владения <br> основным инструментарием', attrs: {class: 'js-hard-skills-section'}})
-          +b-skills-list-item({level: 'Очень высокий'}): |Figma
-          +b-skills-list-item({level: 'Высокий'}): |Protopie
-          +b-skills-list-item({level: 'Высокий'}): |Adobe Photoshop
-          +b-skills-list-item({level: 'Средний'}): |Adobe Illustrator
-          +b-skills-list-item({level: 'Средний'}): |Adobe After Effects
-        +m-hard-skills({title: 'Мой уровень владения <br> дополнительным инструментарием', attrs: {class: 'js-hard-skills-section'}})
-          +b-skills-list-item({level: 'Средний'}): |Blender
-          +b-skills-list-item({level: 'Средний'}): |Corel Draw
-          +b-skills-list-item({level: 'Высокий'}): |Notion
-          +b-skills-list-item({level: 'Средний'}): |VS Code, HTML, CSS, JS
+        +m-hard-skills({title: 'Основной<br> инструментарий', attrs: {class: 'js-hard-skills-section'}})
+          +b-skills-list-item({level: ' '}): |Figma
+          +b-skills-list-item({level: ' '}): |Protopie
+          +b-skills-list-item({level: ' '}): |Adobe Photoshop
+          +b-skills-list-item({level: ' '}): |Adobe Illustrator
+          +b-skills-list-item({level: ' '}): |Adobe After Effects
+        +m-hard-skills({title: 'Дополнительный<br> инструментарий', attrs: {class: 'js-hard-skills-section'}})
+          +b-skills-list-item({level: ' '}): |Blender
+          +b-skills-list-item({level: ' '}): |Corel Draw
+          +b-skills-list-item({level: ' '}): |Notion
+          +b-skills-list-item({level: ' '}): |VS Code, HTML, CSS, JS
 
 
 

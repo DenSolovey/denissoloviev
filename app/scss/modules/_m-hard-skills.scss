@@ -7,7 +7,7 @@
   max-width: 1920px;
   margin-right: auto;
   margin-left: auto;
-  padding: 196px var(--section-horizontal-padding);
+  padding: 156px var(--section-horizontal-padding) 156px;
   column-gap: 56px;
 
   &_title {
@@ -19,5 +19,9 @@
     flex: 1;
     min-width: 478px;
     max-width: 1010px;
+  }
+
+  &:first-child {
+    padding: 156px var(--section-horizontal-padding) 106px;
   }
 }
