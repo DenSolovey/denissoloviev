@@ -71,6 +71,13 @@ mixin index-body(params)
       section#portfolio
         +m-portfolio({attrs: {class: '--external'},title: 'Проекты над которыми я работал'})
           +c-portfolio-card({
+            attrs:{href:'https://www.behance.net/gallery/184426821/Agro-Trans-Logistics-Business-site'},
+            openOn: 'Открыть на Behance', 
+            imageLink:require('../../assets/images/cases/ATL.jpg'),
+            alt: 'Корпоративный сайт для «Agro Trans Logistics»',
+            instruments: ['#Figma', '#After Effects']
+          }): |Корпоративный сайт для «Agro Trans Logistics»
+          +c-portfolio-card({
             attrs:{href:'https://www.behance.net/gallery/165033253/Class-Shedule-for-KubSAU-PWA'},
             openOn: 'Открыть на Behance', 
             imageLink:require('../../assets/images/cases/Kubsau-Shedule.jpg'),
