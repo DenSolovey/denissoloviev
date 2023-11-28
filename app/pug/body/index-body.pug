@@ -16,7 +16,7 @@ mixin index-body(params)
         //-   +b-skills-list-item({}): |Системность
         //-   +b-skills-list-item({}): |Любопытность
       section#expiriense
-        +m-resume({attrs: {class: '--edu js-resume-section'}, title: 'Тут я обучался'})
+        +m-resume({attrs: {class: '--edu js-resume-section'}, title: 'Место обучения'})
           +c-resume-list-item({
             name: 'Кубанский ГАУ',
             role: 'Бакалавр ф-т прикладной информатики',
@@ -30,10 +30,10 @@ mixin index-body(params)
               li В качестве курсовых работ разработал игру на C++ #[+b-link({attrs:{href: 'https://drive.google.com/file/d/11qD-fZ-2nn-kbpGliNvQB5bZmRD1RwsD/view?usp=sharing', target: '_blank'}}): |«Поиск морфинг объектов»] и мобильное приложение для андройд #[+b-link({attrs:{href: 'https://drive.google.com/file/d/127LYhyFsKtF67ubYMhfUnKn3ikE--Pk-/view?usp=sharing', target: '_blank'}}): |«Кухонный калькулятор»]
               li Для диплома разработал плагин для фигмы #[+b-link({attrs:{href: 'https://www.figma.com/community/plugin/1042681939283501853/DS-Templater-(beta)', target: '_blank'}}): |«DS-Templater»] и защитил с отличием
         
-        +m-resume({attrs: {class: '--job'}, title: 'А тут я работал ', date: '4 года 1 месяц'})
+        +m-resume({attrs: {class: '--job'}, title: 'Места работы', date: '4 года 1 месяц'})
           +c-resume-list-item({
             name: 'Кубанский ГАУ',
-            role: 'Дизайнер',
+            role: 'Веб-дизайнер',
             href: 'https://kubsau.ru/',
             site: 'kubsau.ru',
             dateRange: 'Июнь 2019 — Май 2021',  
@@ -41,29 +41,36 @@ mixin index-body(params)
           })
             ul
               b Обязанности
-              li Разработка презнетаций, креативов для полиграфии, материалов и редизайна для сайта
+              li Редизайн сайта для центра компетенций университета
+              li Изготовление графических материалов для этого сайта
+              li Разработка презентаций для преподавателей
             ul.ul-heading
               b Инстрменты
               li.no-dot Figma — Protopie — Adobe Photoshop — Adobe Illustrator — PowerPoint
           
           +c-resume-list-item({
             name: 'ASTEQ',
-            role: 'Web-дизайнер',
+            role: 'UX/UI Дизайнер',
             href: 'https://asteq.ru/',
             site: 'asteq.ru',
             dateRange: 'Май 2021 — Май 2023',  
             dateSize: '| 2 года 1 месяц'
           })
-            ul 
-              b Достижения
-              li Улучшил качество работы с макетами, благодаря чему качество разработки выросло и её скорость увеличилась в 2 раза
-              li Оптимизировал процесс реализации писем, упростив работу разработчиков до внесения небольших корректировок
-              li Разработал дизайн сайта-меню для ресторанов за 4 дня
+            span Интернет агентство полного цикла, которое занимается разработкой сайтов и мобильных приложений разного уровня сложности. Команда состояла из 20 человек
+            //- ul 
+            //-   b Достижения
+            //-   li Улучшил качество работы с макетами, благодаря чему качество разработки выросло и её скорость увеличилась в 2 раза
+            //-   li Оптимизировал процесс реализации писем, упростив работу разработчиков до внесения небольших корректировок
+            //-   li Разработал дизайн сайта-меню для ресторанов за 4 дня
             ul.ul-heading
               b Обязанности
-              li Разработка креативных решений для сайтов и поддержка дизайна существующих интерфейсов
-              li Cкетчинг, прототипирование и создание адаптивного дизайна писем, сайтов и мобильных приложений в Figma
-              li Изготовление баннеров, визуального контента для сайтов и мобильных приложений, креативов для соцсетей и работа над анимацией
+              //- li Разработка креативных решений для сайтов и поддержка дизайна существующих интерфейсов
+              //- li Cкетчинг, прототипирование и создание адаптивного дизайна писем, сайтов и мобильных приложений в Figma
+              //- li Изготовление баннеров, визуального контента для сайтов и мобильных приложений, креативов для соцсетей и работа над анимацией
+              li Разработка макетов интерфейсов и поддержка существующего дизайна в Figma
+              li Изготовление баннеров, визуального контента для интерфейсов
+              li Изготовление креативов для соц.сетей и работа над анимациями в After Effects
+              li Cкетчинг, прототипирование и создание адаптивного дизайна писем, сайтов и мобильных приложений
             ul.ul-heading
               b Инстрменты
               li.no-dot Figma — Protopie — Adobe Photoshop — Adobe Illustrator — Adobe After Effects — Blender 3D
@@ -82,7 +89,7 @@ mixin index-body(params)
             openOn: 'Открыть на Behance', 
             imageLink:require('../../assets/images/cases/Kubsau-Shedule.jpg'),
             alt: 'Рассписание занятий для Кубанского ГАУ',
-            instruments: ['#Figma', '#After Effects']
+            instruments: ['#Figma','#Protopie', '#After Effects']
           }): |Рассписание занятий для КубГАУ
           +c-portfolio-card({
             attrs:{href:'https://www.behance.net/gallery/184888905/Beseda-Restaraunt-Site-menu'},
@@ -140,6 +147,13 @@ mixin index-body(params)
             alt: 'Одностраничник для производителя снеков «Кукусики»',
             instruments: ['#Figma', '#Photoshop', '#After Effects']
           }): |Одностраничник для производителя снеков «Кукусики»
+          +c-portfolio-card({
+            attrs:{href:'https://drive.google.com/file/d/14SxOudVpq3pWgm_sIQfmPClY5NtEDtMi/view?usp=sharing'},
+            openOn: 'Открыть PDF', 
+            imageLink:require('../../assets/images/cases/additional.jpg'),
+            alt: '',
+            instruments: ['']
+          }): |
 
         +m-portfolio({attrs: {class: '--personal'}, title: 'Мои личные проекты'})
           +c-portfolio-card({
