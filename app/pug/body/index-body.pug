@@ -78,12 +78,19 @@ mixin index-body(params)
       section#portfolio
         +m-portfolio({attrs: {class: '--external'},title: 'Проекты над которыми я работал'})
           +c-portfolio-card({
+            attrs:{href:'https://www.behance.net/gallery/186856115/Labinsk-Beef-E-commerce'},
+            openOn: 'Открыть на Behance', 
+            imageLink:require('../../assets/images/cases/Beef.jpg'),
+            alt: 'Интернет-магазин для «Labinsk beef»',
+            instruments: ['#Figma', '#Photoshop', '#After Effects']
+          }): |Интернет-магазин для производителя мраморной говядины «Labinsk beef»
+          +c-portfolio-card({
             attrs:{href:'https://www.behance.net/gallery/184426821/Agro-Trans-Logistics-Business-site'},
             openOn: 'Открыть на Behance', 
             imageLink:require('../../assets/images/cases/ATL.jpg'),
             alt: 'Корпоративный сайт для «Agro Trans Logistics»',
             instruments: ['#Figma', '#Protopie', '#After Effects']
-          }): |Корпоративный сайт для «ATL»
+          }): |Корпоративный сайт для транспортной компании «ATL»
           +c-portfolio-card({
             attrs:{href:'https://www.behance.net/gallery/184888895/Class-Shedule-for-KubSAU-PWA'},
             openOn: 'Открыть на Behance', 
